@@ -119,7 +119,7 @@
                 }
             }
         },
-        "Calculations other": {
+        "Other calculations": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -150,7 +150,7 @@
                 }
             }
         },
-        "Comments other": {
+        "Other comments": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -161,47 +161,47 @@
                 }
             }
         },
-        "Contract Design Responsibility Matrix": {
+        "Design Responsibility Matrix": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Contract Duty of Care (draft)": {
+        "Duty of Care (draft)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Contract Duty of Care (signed)": {
+        "Duty of Care (signed)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Contract JCT (draft)": {
+        "JCT Contract (draft)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Contract JCT (final)": {
+        "JCT Contract (final)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Contract Other Contract documents (draft)": {
+        "Other Contract documents (draft)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Contract Other Contract documents (final)": {
+        "Other Contract documents (final)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Contract Term of engagement (draft)": {
+        "Term of engagement (draft)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Contract Term of engagement (signed)": {
+        "Term of engagement (signed)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
@@ -408,21 +408,21 @@
                 }
             }
         },
-        "Library 2D Models Textures (LowRes)": {
+        "2D Models Textures (LowRes)": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "Textures": {}
                 }
             }
         },
-        "Library 3D Models Objects": {
+        "3D Models Objects": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "Objects": {}
                 }
             }
         },
-        "Library 3D VisualisationObjects": {
+        "3D VisualisationObjects": {
             "BondBryan": {
                 "A-Architecture": {
                     "M-Model": {
@@ -431,14 +431,14 @@
                 }
             }
         },
-        "Library IFC Library": {
+        "IFC Library": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "IFC-Libraries": {}
                 }
             }
         },
-        "Library RVT Families": {
+        "RVT Families": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "Families": {}
@@ -821,7 +821,7 @@
                     }
                 },
             
-        "Report Clash Detection": {
+        "Clash Detection": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -830,7 +830,7 @@
                 }
             }
         },
-        "Report Design and Access Statement": {
+        "Design and Access Statement": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -839,7 +839,7 @@
                 }
             }
         },
-        "Report Heat Loss Calculation Report": {
+        "Heat Loss Calculation Report": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -848,7 +848,7 @@
                 }
             }
         },
-        "Report Progress report": {
+        "Progress report": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -857,7 +857,7 @@
                 }
             }
         },
-        "Report Site Visit": {
+        "Site Visit": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -866,7 +866,7 @@
                 }
             }
         },
-        "Report Stage Report": {
+        "Stage Report": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -875,7 +875,7 @@
                 }
             }
         },
-        "Report Supporting images (Affinity)": {
+        "Supporting images (Affinity)": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -884,7 +884,7 @@
                 }
             }
         },
-        "Report Supporting images (jpg/png)": {
+        "Supporting images (jpg/png)": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -893,7 +893,7 @@
                 }
             }
         },
-        "Report Thermal Bridging": {
+        "Thermal Bridging": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -1034,7 +1034,7 @@
                 }
             }
         },
-        "Schedule other": {
+        "Other Schedules": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
