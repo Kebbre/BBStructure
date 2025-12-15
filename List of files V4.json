@@ -287,7 +287,7 @@
                 }
             }
         },
-        "Additional Fees approval letter": {
+        "Additional Fees approved": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Approvals": {}
@@ -308,7 +308,7 @@
                         }
                     }
                 },
-        "Fees approval letter": {
+        "Fees approved": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Approvals": {}
@@ -408,7 +408,7 @@
                 }
             }
         },
-        "2D Models Textures (LowRes)": {
+        "2D Textures (LowRes)": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "Textures": {}
@@ -821,7 +821,7 @@
                     }
                 },
             
-        "Clash Detection": {
+        "Clash detection report": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {

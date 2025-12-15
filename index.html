@@ -92,9 +92,9 @@
       border-radius: 0 !important;
       border: 1px solid var(--border);
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
       font-size: 0.6rem;
       font-weight: 700;
       color: #0f172a;
@@ -197,6 +197,28 @@
       align-self: flex-start;
       line-height: 1.05;
     }
+    .path-link {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .path-link[disabled] {
+      color: var(--ink);
+      cursor: default;
+      text-decoration: none;
+    }
+    .path-leaf {
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.1;
+    }
     .home-icon-btn {
       margin-top: auto;
       align-self: center;
@@ -270,6 +292,9 @@
       flex: 1;
       min-width: 240px;
     }
+    .related-section + .related-section {
+      margin-top: 18px;
+    }
     .related-grid {
       display: flex;
       flex-wrap: wrap;
@@ -296,6 +321,11 @@
       cursor: pointer;
       word-break: break-word;
       white-space: normal;
+    }
+    .placeholder {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
     }
     @media (max-width: 900px) {
       .detail-layout {
@@ -327,7 +357,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.12</h1>
+          <h1>Version 1.13</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -349,8 +379,14 @@
               <span id="selected-title"></span>
             </div>
             <div class="related-wrap">
-              <h3>Other items in this location</h3>
-              <div class="related-grid" id="related-grid"></div>
+              <div class="related-section">
+                <h3>Subfolders</h3>
+                <div class="related-grid" id="subfolder-grid"></div>
+              </div>
+              <div class="related-section">
+                <h3>Items in this location</h3>
+                <div class="related-grid" id="items-grid"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -367,7 +403,8 @@
       const pathList = document.getElementById('path-list');
       const selectedCard = document.getElementById('selected-card');
       const selectedTitle = document.getElementById('selected-title');
-      const relatedGrid = document.getElementById('related-grid');
+      const subfolderGrid = document.getElementById('subfolder-grid');
+      const itemsGrid = document.getElementById('items-grid');
       const homeBtn = document.getElementById('home-btn');
 
       const CATEGORY_COLORS = {
@@ -393,10 +430,10 @@
 
       const state = {
         items: [],
-        pathGroups: new Map(),
+        tree: createFolderNode('Root', []),
         categoryLookup: new Map(),
         selectedCategories: new Set(),
-        currentItem: null,
+        currentSelection: null,
       };
 
       homeBtn.addEventListener('click', () => switchView('home'));
@@ -415,13 +452,11 @@
           state.selectedCategories = new Set(allCategories());
 
           const root = filesData['List of files'] || filesData;
-          state.items = Object.entries(root || {}).map(([name, branch]) => ({
-            name,
-            path: findFirstLeafPath(branch),
-          }));
+          const { treeRoot, items } = buildTree(root);
+          state.tree = treeRoot;
+          state.items = items;
           state.items.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
 
-          state.pathGroups = groupByPath(state.items);
           renderLegend();
           renderHome();
         } catch (error) {
@@ -450,27 +485,47 @@
         return map;
       }
 
+      function buildTree(filesRoot) {
+        const treeRoot = createFolderNode('Root', []);
+        const items = [];
+        Object.entries(filesRoot || {}).forEach(([name, branch]) => {
+          const path = findFirstLeafPath(branch);
+          items.push({ name, path });
+          insertItem(treeRoot, path, name);
+        });
+        return { treeRoot, items };
+      }
+
+      function createFolderNode(name, path) {
+        return { name, path, folders: new Map(), items: [] };
+      }
+
+      function insertItem(node, path, itemName) {
+        let pointer = node;
+        (path || []).forEach((segment) => {
+          if (!pointer.folders.has(segment)) {
+            pointer.folders.set(segment, createFolderNode(segment, [...pointer.path, segment]));
+          }
+          pointer = pointer.folders.get(segment);
+        });
+        pointer.items.push(itemName);
+      }
+
+      function getFolderAtPath(path = []) {
+        let pointer = state.tree;
+        for (const part of path || []) {
+          if (!pointer || !pointer.folders.has(part)) return null;
+          pointer = pointer.folders.get(part);
+        }
+        return pointer;
+      }
+
       function findFirstLeafPath(node) {
         if (!node || typeof node !== 'object') return [];
         const entries = Object.entries(node);
         if (!entries.length) return [];
         const [key, value] = entries[0];
         return [key, ...findFirstLeafPath(value)];
-      }
-
-      function groupByPath(items) {
-        const map = new Map();
-        items.forEach((item) => {
-          const key = pathKey(item.path);
-          const bucket = map.get(key) || [];
-          bucket.push(item.name);
-          map.set(key, bucket);
-        });
-        return map;
-      }
-
-      function pathKey(pathArray) {
-        return (pathArray || []).join(' > ');
       }
 
       function renderHome(options = {}) {
@@ -489,68 +544,144 @@
           card.dataset.name = item.name;
           applyColorStyles(card, item.name);
           card.setAttribute('aria-label', `${item.name} (${categoryForName(item.name)})`);
-          card.addEventListener('click', () => renderDetail(item));
+          card.addEventListener('click', () => renderItemDetail(item));
           cardGrid.appendChild(card);
         });
 
         if (!skipSwitch) switchView('home');
       }
 
-      function renderDetail(item) {
-        const key = pathKey(item.path);
-        state.currentItem = item;
+      function renderItemDetail(item) {
+        const folder = getFolderAtPath(item.path) || state.tree;
+        state.currentSelection = { type: 'item', name: item.name, path: item.path };
         state.selectedCategories = new Set(allCategories());
         renderLegend();
-        pathList.innerHTML = '';
+        renderDetailView({ title: item.name, colorName: item.name, path: item.path, folder, leafName: item.name });
+      }
 
-        if (item.path.length) {
-          item.path.forEach((part, index) => {
-            const node = document.createElement('div');
-            node.className = 'path-node';
-            node.textContent = part;
-            pathList.appendChild(node);
-            if (index < item.path.length - 1) {
-              const arrow = document.createElement('div');
-              arrow.className = 'path-arrow';
-              arrow.textContent = '▾';
-              pathList.appendChild(arrow);
-            }
-          });
-        } else {
+      function renderFolderDetail(path = []) {
+        const folder = getFolderAtPath(path) || state.tree;
+        state.currentSelection = { type: 'folder', name: folder?.name || 'Folder', path: folder?.path || [] };
+        state.selectedCategories = new Set(allCategories());
+        renderLegend();
+        renderDetailView({
+          title: folder?.name || 'Folder',
+          colorName: 'Undefined',
+          path: folder?.path || [],
+          folder,
+          leafName: null,
+        });
+      }
+
+      function renderDetailView({ title, colorName, path, folder, leafName }) {
+        renderBreadcrumb(path, leafName);
+        applyColorStyles(selectedCard, colorName, { ignoreFilter: true });
+        selectedTitle.textContent = title;
+        selectedTitle.style.color = colorStylesForName(colorName, { ignoreFilter: true }).text;
+
+        renderSubfolders(folder);
+        renderItemsInLocation(folder, leafName);
+        switchView('detail');
+      }
+
+      function renderBreadcrumb(path = [], leafName) {
+        pathList.innerHTML = '';
+        if (!path.length && !leafName) {
           const node = document.createElement('div');
-          node.className = 'path-node';
-          node.textContent = 'No path found';
+          node.className = 'path-node path-leaf';
+          node.textContent = 'Root';
           pathList.appendChild(node);
+          return;
         }
 
-        applyColorStyles(selectedCard, item.name, { ignoreFilter: true });
-        selectedTitle.textContent = item.name;
-        selectedTitle.style.color = colorStylesForName(item.name, { ignoreFilter: true }).text;
+        path.forEach((part, index) => {
+          const node = document.createElement('div');
+          node.className = 'path-node';
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'path-link';
+          button.textContent = part;
+          if (index === path.length - 1 && !leafName) {
+            button.disabled = true;
+            button.setAttribute('aria-current', 'location');
+          } else {
+            button.addEventListener('click', () => renderFolderDetail(path.slice(0, index + 1)));
+          }
+          node.appendChild(button);
+          pathList.appendChild(node);
 
-        const related = (state.pathGroups.get(key) || [item.name])
-          .filter((name) => name !== item.name)
-          .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+          if (index < path.length - 1 || leafName) {
+            const arrow = document.createElement('div');
+            arrow.className = 'path-arrow';
+            arrow.textContent = '▾';
+            pathList.appendChild(arrow);
+          }
+        });
 
-        relatedGrid.innerHTML = '';
-        related.forEach((entry) => {
+        if (leafName) {
+          const leaf = document.createElement('div');
+          leaf.className = 'path-node path-leaf';
+          leaf.textContent = leafName;
+          pathList.appendChild(leaf);
+        }
+      }
+
+      function renderSubfolders(folder) {
+        subfolderGrid.innerHTML = '';
+        const subfolders = folder && folder.folders ? Array.from(folder.folders.values()) : [];
+        subfolders.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
+
+        if (!subfolders.length) {
+          const empty = document.createElement('p');
+          empty.className = 'placeholder';
+          empty.textContent = 'No subfolders';
+          subfolderGrid.appendChild(empty);
+          return;
+        }
+
+        subfolders.forEach((child) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'related-card';
+          btn.textContent = child.name;
+          btn.dataset.kind = 'folder';
+          applyColorStyles(btn, 'Undefined', { ignoreFilter: true });
+          btn.addEventListener('click', () => renderFolderDetail(child.path.slice()));
+          subfolderGrid.appendChild(btn);
+        });
+      }
+
+      function renderItemsInLocation(folder, currentLeaf) {
+        itemsGrid.innerHTML = '';
+        const items = [...(folder?.items || [])].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
+        if (!items.length) {
+          const empty = document.createElement('p');
+          empty.className = 'placeholder';
+          empty.textContent = 'No items here';
+          itemsGrid.appendChild(empty);
+          return;
+        }
+
+        items.forEach((entry) => {
           const btn = document.createElement('button');
           btn.type = 'button';
           btn.className = 'related-card';
           btn.textContent = entry;
           btn.dataset.name = entry;
           applyColorStyles(btn, entry, { ignoreFilter: true });
+          if (entry === currentLeaf) btn.setAttribute('aria-current', 'true');
           btn.addEventListener('click', () => {
             const nextItem = state.items.find((candidate) => candidate.name === entry);
-            if (nextItem) renderDetail(nextItem);
+            if (nextItem) renderItemDetail(nextItem);
           });
-          relatedGrid.appendChild(btn);
+          itemsGrid.appendChild(btn);
         });
-
-        switchView('detail');
       }
 
       function switchView(view) {
         const isHome = view === 'home';
+        if (isHome) state.currentSelection = null;
         homeView.classList.toggle('hidden', !isHome);
         detailView.classList.toggle('hidden', isHome);
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -591,13 +722,17 @@
           const { name } = card.dataset;
           if (name) applyColorStyles(card, name);
         });
-        if (state.currentItem) {
-          applyColorStyles(selectedCard, state.currentItem.name, { ignoreFilter: true });
-          selectedTitle.style.color = colorStylesForName(state.currentItem.name, { ignoreFilter: true }).text;
+        if (state.currentSelection) {
+          const colorTarget = state.currentSelection.type === 'item' ? state.currentSelection.name : 'Undefined';
+          applyColorStyles(selectedCard, colorTarget, { ignoreFilter: true });
+          selectedTitle.style.color = colorStylesForName(colorTarget, { ignoreFilter: true }).text;
         }
-        relatedGrid.querySelectorAll('.related-card').forEach((btn) => {
+        itemsGrid.querySelectorAll('.related-card').forEach((btn) => {
           const { name } = btn.dataset;
           if (name) applyColorStyles(btn, name, { ignoreFilter: true });
+        });
+        subfolderGrid.querySelectorAll('.related-card').forEach((btn) => {
+          applyColorStyles(btn, 'Undefined', { ignoreFilter: true });
         });
       }
 
