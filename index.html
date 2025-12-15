@@ -220,8 +220,8 @@
       line-height: 1.1;
     }
     .home-icon-btn {
-      margin-top: auto;
-      align-self: center;
+      margin-bottom: 8px;
+      align-self: flex-start;
       width: 62px;
       height: 62px;
       border-radius: 16px;
@@ -338,7 +338,7 @@
       }
       .home-icon-btn {
         margin-top: 0;
-        margin-left: auto;
+        margin-left: 0;
       }
       .selected-card {
         width: min(250px, 90vw);
@@ -357,7 +357,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.14</h1>
+          <h1>Version 1.15</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -370,8 +370,8 @@
     <section id="detail-view" class="view hidden">
       <div class="detail-layout">
         <aside class="path-panel">
-          <div class="path-list" id="path-list"></div>
           <button class="home-icon-btn" id="home-btn" type="button" aria-label="Home"></button>
+          <div class="path-list" id="path-list"></div>
         </aside>
         <div class="detail-main">
           <div class="focus-row">
@@ -552,11 +552,19 @@
       }
 
       function renderItemDetail(item) {
-        const folder = getFolderAtPath(item.path) || state.tree;
+        const folderPath = item.path || [];
+        const folder = getFolderAtPath(folderPath) || state.tree;
+        const breadcrumbPath = folderPath.slice(0, Math.max(folderPath.length - 1, 0));
         state.currentSelection = { type: 'item', name: item.name, path: item.path };
         state.selectedCategories = new Set(allCategories());
         renderLegend();
-        renderDetailView({ title: item.name, colorName: item.name, path: item.path, folder, leafName: item.name });
+        renderDetailView({
+          title: item.name,
+          colorName: item.name,
+          path: breadcrumbPath,
+          folder,
+          leafName: item.name,
+        });
       }
 
       function renderFolderDetail(path = []) {
@@ -586,7 +594,7 @@
 
       function renderBreadcrumb(path = [], leafName) {
         pathList.innerHTML = '';
-        if (!path.length && !leafName) {
+        if (!path.length) {
           const node = document.createElement('div');
           node.className = 'path-node path-leaf';
           node.textContent = 'Root';
@@ -610,20 +618,13 @@
           node.appendChild(button);
           pathList.appendChild(node);
 
-          if (index < path.length - 1 || leafName) {
+          if (index < path.length - 1) {
             const arrow = document.createElement('div');
             arrow.className = 'path-arrow';
             arrow.textContent = '▾';
             pathList.appendChild(arrow);
           }
         });
-
-        if (leafName) {
-          const leaf = document.createElement('div');
-          leaf.className = 'path-node path-leaf';
-          leaf.textContent = leafName;
-          pathList.appendChild(leaf);
-        }
       }
 
       function renderSubfolders(folder) {
