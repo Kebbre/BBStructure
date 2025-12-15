@@ -357,7 +357,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.13</h1>
+          <h1>Version 1.14</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -653,7 +653,9 @@
 
       function renderItemsInLocation(folder, currentLeaf) {
         itemsGrid.innerHTML = '';
-        const items = [...(folder?.items || [])].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+        const items = [...(folder?.items || [])]
+          .filter((entry) => !currentLeaf || entry !== currentLeaf)
+          .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 
         if (!items.length) {
           const empty = document.createElement('p');
