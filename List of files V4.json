@@ -287,42 +287,42 @@
                 }
             }
         },
-        "Fees Additional Fees ApprovedConfirmation": {
+        "Additional Fees approval letter": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Approvals": {}
                         }
                     }
                 },
-        "Fees Additional Fees calculations": {
+        "Additional Fees calculations": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Calculations 'L'": {}
                         }
                     }
                 },
-        "Fees Additional Fees letter": {
+        "Additional Fees letter": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Letters 'T'": {}
                         }
                     }
                 },
-        "Fees Main Fees ApprovedConfirmation": {
+        "Fees approval letter": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Approvals": {}
                         }
                     }
                 },
-        "Fees Main Fees calculations": {
+        "Fees calculations": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Calculations 'L'": {}
                         }
                     }
         },
-        "Fees Main Fees letter": {
+        "Fees letter": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Letters 'T'": {}
@@ -422,7 +422,7 @@
                 }
             }
         },
-        "3D VisualisationObjects": {
+        "3D Visualisation Objects": {
             "BondBryan": {
                 "A-Architecture": {
                     "M-Model": {
@@ -705,7 +705,7 @@
                 }
             }
         },
-        "Photograph PostCompletion": {
+        "Photograph Post Completion": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -787,7 +787,7 @@
                 "Issuing party": {}
             }
         },
-        "Programme DEIR (modified)": {
+        "DEIR (modified)": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -796,17 +796,17 @@
                 }
             }
         },
-        "Programme DEIR (original)": {
+        "DEIR (original)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Programme MIDP": {
+        "MIDP": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Programme TIDP": {
+        "TIDP": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -990,7 +990,7 @@
                 }
             }
         },
-        "Schedule Change Control": {
+        "Change Control": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -999,7 +999,7 @@
                 }
             }
         },
-        "Schedule Elements Schedules (windows, doors,\u2026)": {
+        "Elements Schedules (windows, doors,\u2026)": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -1010,7 +1010,7 @@
                 }
             }
         },
-        "Schedule Finishes": {
+        "Finishes schedule": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -1021,7 +1021,7 @@
                 }
             }
         },
-        "Schedule Sanitaryware schedule": {
+        "Sanitaryware schedule": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {

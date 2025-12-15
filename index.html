@@ -76,19 +76,26 @@
       gap: 10px;
     }
     .legend-item {
-      width: 60px;
-      height: 60px;
-      border-radius: 6px;
+      width: 50px;
+      height: 50px;
+      border-radius: 0;
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-size: 0.52rem;
-      font-weight: 600;
+      font-size: 0.6rem;
+      font-weight: 700;
       color: #0f172a;
-      padding: 5px;
+      padding: 4px;
       line-height: 1;
+      cursor: pointer;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .legend-selected {
+      border-width: 2px;
+      border-color: #0f172a;
+      box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
     }
     .view {
       background: var(--panel);
@@ -302,7 +309,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.8</h1>
+          <h1>Version 1.9</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -356,13 +363,13 @@
         Undefined: '#d9d9d9',
       };
       const LEGEND_ITEMS = [
-        { label: 'Images and Photo', color: CATEGORY_COLORS['Images and Photo'] },
-        { label: 'Texts and Presentations', color: CATEGORY_COLORS['Texts and Presentations'] },
-        { label: 'Schedules and Lists', color: CATEGORY_COLORS['Schedules and Lists'] },
-        { label: 'Contracts and legal', color: CATEGORY_COLORS['Contracts and legal'] },
-        { label: 'BIM and Models', color: CATEGORY_COLORS['BIM and Models'] },
-        { label: 'Drawings', color: CATEGORY_COLORS['Drawings'] },
-        { label: 'Other / Undefined', color: CATEGORY_COLORS.Other },
+        { label: 'Images and Photo', color: CATEGORY_COLORS['Images and Photo'], categories: ['Images and Photo'] },
+        { label: 'Texts and Presentations', color: CATEGORY_COLORS['Texts and Presentations'], categories: ['Texts and Presentations'] },
+        { label: 'Schedules and Lists', color: CATEGORY_COLORS['Schedules and Lists'], categories: ['Schedules and Lists'] },
+        { label: 'Contracts and legal', color: CATEGORY_COLORS['Contracts and legal'], categories: ['Contracts and legal'] },
+        { label: 'BIM and Models', color: CATEGORY_COLORS['BIM and Models'], categories: ['BIM and Models'] },
+        { label: 'Drawings', color: CATEGORY_COLORS['Drawings'], categories: ['Drawings'] },
+        { label: 'Other / Undefined', color: CATEGORY_COLORS.Other, categories: ['Other', 'Undefined'] },
       ];
       const DEFAULT_COLOR = '#d9d9d9';
 
@@ -370,6 +377,8 @@
         items: [],
         pathGroups: new Map(),
         categoryLookup: new Map(),
+        selectedCategories: new Set(),
+        currentItem: null,
       };
 
       homeBtn.addEventListener('click', () => switchView('home'));
@@ -385,6 +394,7 @@
           ]);
 
           state.categoryLookup = buildCategoryLookup(catData);
+          state.selectedCategories = new Set(allCategories());
 
           const root = filesData['List of files'] || filesData;
           state.items = Object.entries(root || {}).map(([name, branch]) => ({
@@ -445,7 +455,8 @@
         return (pathArray || []).join(' > ');
       }
 
-      function renderHome() {
+      function renderHome(options = {}) {
+        const { skipSwitch = false } = options;
         cardGrid.innerHTML = '';
         if (!state.items.length) {
           cardGrid.innerHTML = '<p>No items found in List of files V4.json</p>';
@@ -457,19 +468,19 @@
           card.type = 'button';
           card.className = 'card';
           card.textContent = item.name;
-          const color = colorForName(item.name);
-          card.style.backgroundColor = color;
-          card.style.borderColor = color;
+          card.dataset.name = item.name;
+          applyColorStyles(card, item.name);
           card.setAttribute('aria-label', `${item.name} (${categoryForName(item.name)})`);
           card.addEventListener('click', () => renderDetail(item));
           cardGrid.appendChild(card);
         });
 
-        switchView('home');
+        if (!skipSwitch) switchView('home');
       }
 
       function renderDetail(item) {
         const key = pathKey(item.path);
+        state.currentItem = item;
         pathList.innerHTML = '';
 
         if (item.path.length) {
@@ -492,10 +503,9 @@
           pathList.appendChild(node);
         }
 
-        const selectedColor = colorForName(item.name);
-        selectedCard.style.backgroundColor = selectedColor;
-        selectedCard.style.borderColor = selectedColor;
+        applyColorStyles(selectedCard, item.name);
         selectedTitle.textContent = item.name;
+        selectedTitle.style.color = colorStylesForName(item.name).text;
 
         const related = (state.pathGroups.get(key) || [item.name])
           .filter((name) => name !== item.name)
@@ -507,9 +517,8 @@
           btn.type = 'button';
           btn.className = 'related-card';
           btn.textContent = entry;
-          const color = colorForName(entry);
-          btn.style.backgroundColor = color;
-          btn.style.borderColor = color;
+          btn.dataset.name = entry;
+          applyColorStyles(btn, entry);
           btn.addEventListener('click', () => {
             const nextItem = state.items.find((candidate) => candidate.name === entry);
             if (nextItem) renderDetail(nextItem);
@@ -527,13 +536,61 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      function colorForName(name) {
+      function colorStylesForName(name) {
         const category = categoryForName(name);
-        return CATEGORY_COLORS[category] || DEFAULT_COLOR;
+        const selected = isCategorySelected(category);
+        if (selected) {
+          const color = CATEGORY_COLORS[category] || DEFAULT_COLOR;
+          return { background: color, border: color, text: '#0f172a' };
+        }
+        return { background: '#ffffff', border: '#cdd4e5', text: '#6b7280' };
+      }
+
+      function applyColorStyles(element, name) {
+        const styles = colorStylesForName(name);
+        element.style.backgroundColor = styles.background;
+        element.style.borderColor = styles.border;
+        element.style.color = styles.text;
       }
 
       function categoryForName(name) {
         return state.categoryLookup.get(name) || 'Undefined';
+      }
+
+      function isCategorySelected(category) {
+        return state.selectedCategories.has(category);
+      }
+
+      function allCategories() {
+        return LEGEND_ITEMS.flatMap((entry) => entry.categories || []);
+      }
+
+      function refreshColors() {
+        cardGrid.querySelectorAll('.card').forEach((card) => {
+          const { name } = card.dataset;
+          if (name) applyColorStyles(card, name);
+        });
+        if (state.currentItem) {
+          applyColorStyles(selectedCard, state.currentItem.name);
+          selectedTitle.style.color = colorStylesForName(state.currentItem.name).text;
+        }
+        relatedGrid.querySelectorAll('.related-card').forEach((btn) => {
+          const { name } = btn.dataset;
+          if (name) applyColorStyles(btn, name);
+        });
+      }
+
+      function toggleLegend(entry) {
+        const isSelected = entry.categories.every((cat) => state.selectedCategories.has(cat));
+        entry.categories.forEach((cat) => {
+          if (isSelected) {
+            state.selectedCategories.delete(cat);
+          } else {
+            state.selectedCategories.add(cat);
+          }
+        });
+        renderLegend();
+        refreshColors();
       }
 
       function renderLegend() {
@@ -541,11 +598,15 @@
         const legend = document.createElement('div');
         legend.className = 'legend';
         LEGEND_ITEMS.forEach((entry) => {
-          const item = document.createElement('div');
+          const isSelected = entry.categories.every((cat) => state.selectedCategories.has(cat));
+          const item = document.createElement('button');
+          item.type = 'button';
           item.className = 'legend-item';
+          if (isSelected) item.classList.add('legend-selected');
           item.textContent = entry.label;
           item.style.backgroundColor = entry.color;
           item.style.borderColor = entry.color;
+          item.addEventListener('click', () => toggleLegend(entry));
           legend.appendChild(item);
         });
         statusEl.appendChild(legend);
