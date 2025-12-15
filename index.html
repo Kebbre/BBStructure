@@ -111,75 +111,161 @@
       box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
       border-color: #c3c9d6;
     }
-    .breadcrumb {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      font-weight: 600;
-      margin-bottom: 16px;
-      color: var(--ink);
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      align-items: stretch;
     }
-    .crumb-part {
-      padding: 6px 10px;
-      border-radius: 10px;
-      background: #eef2fb;
-      border: 1px solid var(--border);
-    }
-    .crumb-sep { color: var(--muted); }
-    .location {
-      margin-bottom: 16px;
-    }
-    .location h2 {
-      margin: 0 0 4px 0;
-      font-size: 1.6rem;
-      letter-spacing: -0.01em;
-    }
-    .muted {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 12px 0 24px 0;
-      padding: 0;
-      list-style: none;
-    }
-    .pill {
-      background: #f5f6fb;
+    .path-panel {
+      background: #f7f8fc;
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 10px 14px;
-      font-weight: 600;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 100%;
+    }
+    .path-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-weight: 700;
       color: var(--ink);
     }
-    .footer {
-      margin-top: 28px;
+    .path-node {
       display: flex;
-      justify-content: flex-end;
-    }
-    button.btn {
-      border: none;
-      border-radius: 999px;
-      padding: 12px 18px;
+      align-items: center;
+      gap: 8px;
       font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      color: #ffffff;
-      background: linear-gradient(135deg, var(--accent), #1e3a8a);
-      box-shadow: 0 10px 24px rgba(29, 78, 216, 0.25);
-      transition: transform 0.14s ease, box-shadow 0.14s ease;
     }
-    button.btn:hover {
+    .path-arrow {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.2rem;
+      align-self: center;
+    }
+    .home-icon-btn {
+      margin-top: auto;
+      align-self: center;
+      width: 62px;
+      height: 62px;
+      border-radius: 16px;
+      border: 1px solid #c5c8d2;
+      background: linear-gradient(180deg, #f8f9fc 0%, #e5e7ee 100%);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .home-icon-btn::before {
+      content: "";
+      position: absolute;
+      bottom: 16px;
+      left: 15px;
+      width: 32px;
+      height: 22px;
+      background: #d7d8dc;
+      border: 1px solid #8d919c;
+      border-radius: 3px 3px 6px 6px;
+      box-sizing: border-box;
+    }
+    .home-icon-btn::after {
+      content: "";
+      position: absolute;
+      bottom: 33px;
+      left: 12px;
+      border-left: 19px solid transparent;
+      border-right: 19px solid transparent;
+      border-bottom: 16px solid #b7bbc5;
+    }
+    .home-icon-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(29, 78, 216, 0.32);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+    .detail-main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+    .focus-row {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .selected-card {
+      width: 250px;
+      height: 250px;
+      border: 6px solid #e8eaf1;
+      border-radius: 8px;
+      padding: 18px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+      background: #ffffff;
+      word-break: break-word;
+      white-space: normal;
+    }
+    .related-wrap {
+      flex: 1;
+      min-width: 240px;
+    }
+    .related-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .related-card {
+      width: 90px;
+      height: 90px;
+      border: 3px solid #e8eaf1;
+      border-radius: 6px;
+      padding: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.08);
+      background: #ffffff;
+      cursor: pointer;
+      word-break: break-word;
+      white-space: normal;
+    }
+    @media (max-width: 900px) {
+      .detail-layout {
+        grid-template-columns: 1fr;
+      }
+      .path-panel {
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .home-icon-btn {
+        margin-top: 0;
+        margin-left: auto;
+      }
+      .selected-card {
+        width: min(250px, 90vw);
+        height: min(250px, 90vw);
+      }
     }
     @media (max-width: 640px) {
       main { padding: 16px 12px 32px; }
-      .breadcrumb { font-size: 0.95rem; }
     }
   </style>
 </head>
@@ -201,15 +287,22 @@
     </section>
 
     <section id="detail-view" class="view hidden">
-      <div class="breadcrumb" id="breadcrumb"></div>
-      <div class="location">
-        <h2 id="location-title"></h2>
-        <p class="muted" id="location-subtitle"></p>
-      </div>
-      <h3>Items in this location</h3>
-      <ul class="pill-list" id="related-list"></ul>
-      <div class="footer">
-        <button class="btn" id="home-btn" type="button">Home</button>
+      <div class="detail-layout">
+        <aside class="path-panel">
+          <div class="path-list" id="path-list"></div>
+          <button class="home-icon-btn" id="home-btn" type="button" aria-label="Home"></button>
+        </aside>
+        <div class="detail-main">
+          <div class="focus-row">
+            <div class="selected-card" id="selected-card">
+              <span id="selected-title"></span>
+            </div>
+            <div class="related-wrap">
+              <h3>Items in this location</h3>
+              <div class="related-grid" id="related-grid"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -220,10 +313,10 @@
       const cardGrid = document.getElementById('card-grid');
       const homeView = document.getElementById('home-view');
       const detailView = document.getElementById('detail-view');
-      const breadcrumbEl = document.getElementById('breadcrumb');
-      const titleEl = document.getElementById('location-title');
-      const subtitleEl = document.getElementById('location-subtitle');
-      const relatedList = document.getElementById('related-list');
+      const pathList = document.getElementById('path-list');
+      const selectedCard = document.getElementById('selected-card');
+      const selectedTitle = document.getElementById('selected-title');
+      const relatedGrid = document.getElementById('related-grid');
       const homeBtn = document.getElementById('home-btn');
 
       const brandColors = ['#00ccde', '#ff8fad', '#ff8200', '#fff229', '#5cba45', '#d1c9ba'];
@@ -295,7 +388,7 @@
           card.type = 'button';
           card.className = 'card';
           card.textContent = item.name;
-          const color = pickBrandColor();
+          const color = colorForName(item.name);
           card.style.backgroundColor = color;
           card.style.borderColor = color;
           card.addEventListener('click', () => renderDetail(item));
@@ -307,35 +400,51 @@
 
       function renderDetail(item) {
         const key = pathKey(item.path);
-        breadcrumbEl.innerHTML = '';
+        pathList.innerHTML = '';
 
         if (item.path.length) {
           item.path.forEach((part, index) => {
-            const span = document.createElement('span');
-            span.className = 'crumb-part';
-            span.textContent = part;
-            breadcrumbEl.appendChild(span);
+            const node = document.createElement('div');
+            node.className = 'path-node';
+            node.textContent = part;
+            pathList.appendChild(node);
             if (index < item.path.length - 1) {
-              const sep = document.createElement('span');
-              sep.className = 'crumb-sep';
-              sep.textContent = '›';
-              breadcrumbEl.appendChild(sep);
+              const arrow = document.createElement('div');
+              arrow.className = 'path-arrow';
+              arrow.textContent = '▾';
+              pathList.appendChild(arrow);
             }
           });
         } else {
-          breadcrumbEl.textContent = 'No path found';
+          const node = document.createElement('div');
+          node.className = 'path-node';
+          node.textContent = 'No path found';
+          pathList.appendChild(node);
         }
 
-        titleEl.textContent = key || item.name;
-        subtitleEl.textContent = `Selected: ${item.name}`;
+        const selectedColor = colorForName(item.name);
+        selectedCard.style.backgroundColor = selectedColor;
+        selectedCard.style.borderColor = selectedColor;
+        selectedTitle.textContent = item.name;
 
-        const related = state.pathGroups.get(key) || [item.name];
-        relatedList.innerHTML = '';
+        const related = (state.pathGroups.get(key) || [item.name])
+          .filter((name) => name !== item.name)
+          .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
+        relatedGrid.innerHTML = '';
         related.forEach((entry) => {
-          const li = document.createElement('li');
-          li.className = 'pill';
-          li.textContent = entry;
-          relatedList.appendChild(li);
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'related-card';
+          btn.textContent = entry;
+          const color = colorForName(entry);
+          btn.style.backgroundColor = color;
+          btn.style.borderColor = color;
+          btn.addEventListener('click', () => {
+            const nextItem = state.items.find((candidate) => candidate.name === entry);
+            if (nextItem) renderDetail(nextItem);
+          });
+          relatedGrid.appendChild(btn);
         });
 
         switchView('detail');
@@ -348,8 +457,13 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      function pickBrandColor() {
-        const index = Math.floor(Math.random() * brandColors.length);
+      function colorForName(name) {
+        let hash = 0;
+        for (let i = 0; i < name.length; i += 1) {
+          hash = ((hash << 5) - hash) + name.charCodeAt(i);
+          hash |= 0;
+        }
+        const index = Math.abs(hash) % brandColors.length;
         return brandColors[index];
       }
     })();
