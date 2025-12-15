@@ -78,7 +78,7 @@
     .legend-item {
       width: 50px;
       height: 50px;
-      border-radius: 0;
+      border-radius: 0 !important;
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
@@ -91,6 +91,10 @@
       line-height: 1;
       cursor: pointer;
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: #ffffff;
     }
     .legend-selected {
       border-width: 2px;
@@ -309,7 +313,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.9</h1>
+          <h1>Version 1.10</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -604,8 +608,15 @@
           item.className = 'legend-item';
           if (isSelected) item.classList.add('legend-selected');
           item.textContent = entry.label;
-          item.style.backgroundColor = entry.color;
-          item.style.borderColor = entry.color;
+          if (isSelected) {
+            item.style.backgroundColor = entry.color;
+            item.style.borderColor = '#0f172a';
+            item.style.color = '#0f172a';
+          } else {
+            item.style.backgroundColor = '#ffffff';
+            item.style.borderColor = '#cdd4e5';
+            item.style.color = '#6b7280';
+          }
           item.addEventListener('click', () => toggleLegend(entry));
           legend.appendChild(item);
         });
