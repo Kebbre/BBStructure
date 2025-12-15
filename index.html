@@ -75,6 +75,17 @@
       flex-wrap: wrap;
       gap: 10px;
     }
+    .legend-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .legend-label {
+      font-weight: 700;
+      color: var(--ink);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
     .legend-item {
       width: 50px;
       height: 50px;
@@ -89,6 +100,9 @@
       color: #0f172a;
       padding: 4px;
       line-height: 1;
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
       cursor: pointer;
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
       appearance: none;
@@ -97,7 +111,7 @@
       background: #ffffff;
     }
     .legend-selected {
-      border-width: 2px;
+      border-width: 1.5px;
       border-color: #0f172a;
       box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.15);
     }
@@ -313,7 +327,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.11</h1>
+          <h1>Version 1.12</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -485,6 +499,8 @@
       function renderDetail(item) {
         const key = pathKey(item.path);
         state.currentItem = item;
+        state.selectedCategories = new Set(allCategories());
+        renderLegend();
         pathList.innerHTML = '';
 
         if (item.path.length) {
@@ -507,9 +523,9 @@
           pathList.appendChild(node);
         }
 
-        applyColorStyles(selectedCard, item.name);
+        applyColorStyles(selectedCard, item.name, { ignoreFilter: true });
         selectedTitle.textContent = item.name;
-        selectedTitle.style.color = colorStylesForName(item.name).text;
+        selectedTitle.style.color = colorStylesForName(item.name, { ignoreFilter: true }).text;
 
         const related = (state.pathGroups.get(key) || [item.name])
           .filter((name) => name !== item.name)
@@ -522,7 +538,7 @@
           btn.className = 'related-card';
           btn.textContent = entry;
           btn.dataset.name = entry;
-          applyColorStyles(btn, entry);
+          applyColorStyles(btn, entry, { ignoreFilter: true });
           btn.addEventListener('click', () => {
             const nextItem = state.items.find((candidate) => candidate.name === entry);
             if (nextItem) renderDetail(nextItem);
@@ -540,9 +556,10 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      function colorStylesForName(name) {
+      function colorStylesForName(name, options = {}) {
+        const { ignoreFilter = false } = options;
         const category = categoryForName(name);
-        const selected = isCategorySelected(category);
+        const selected = ignoreFilter ? true : isCategorySelected(category);
         if (selected) {
           const color = CATEGORY_COLORS[category] || DEFAULT_COLOR;
           return { background: color, border: color, text: '#0f172a' };
@@ -550,8 +567,8 @@
         return { background: '#ffffff', border: '#cdd4e5', text: '#6b7280' };
       }
 
-      function applyColorStyles(element, name) {
-        const styles = colorStylesForName(name);
+      function applyColorStyles(element, name, options = {}) {
+        const styles = colorStylesForName(name, options);
         element.style.backgroundColor = styles.background;
         element.style.borderColor = styles.border;
         element.style.color = styles.text;
@@ -575,12 +592,12 @@
           if (name) applyColorStyles(card, name);
         });
         if (state.currentItem) {
-          applyColorStyles(selectedCard, state.currentItem.name);
-          selectedTitle.style.color = colorStylesForName(state.currentItem.name).text;
+          applyColorStyles(selectedCard, state.currentItem.name, { ignoreFilter: true });
+          selectedTitle.style.color = colorStylesForName(state.currentItem.name, { ignoreFilter: true }).text;
         }
         relatedGrid.querySelectorAll('.related-card').forEach((btn) => {
           const { name } = btn.dataset;
-          if (name) applyColorStyles(btn, name);
+          if (name) applyColorStyles(btn, name, { ignoreFilter: true });
         });
       }
 
@@ -599,6 +616,11 @@
 
       function renderLegend() {
         statusEl.textContent = '';
+        const wrap = document.createElement('div');
+        wrap.className = 'legend-wrap';
+        const label = document.createElement('div');
+        label.className = 'legend-label';
+        label.textContent = 'Filter';
         const legend = document.createElement('div');
         legend.className = 'legend';
         LEGEND_ITEMS.forEach((entry) => {
@@ -620,7 +642,9 @@
           item.addEventListener('click', () => toggleLegend(entry));
           legend.appendChild(item);
         });
-        statusEl.appendChild(legend);
+        wrap.appendChild(label);
+        wrap.appendChild(legend);
+        statusEl.appendChild(wrap);
       }
     })();
   </script>
