@@ -41,7 +41,7 @@
         "Presentation Main file (InDesign)",
         "Presentation Main file (PowerPoint)",
         "Product reference",
-        "Report Clash Detection",
+        
         "Report Design and Access Statement",
         "Report Heat Loss Calculation Report",
         "Report Progress report",
@@ -106,6 +106,12 @@
         "BIM other contractual documents  (draft external)",
         "BIM other contractual documents (draft BB produced)",
         "BIM other contractual documents (final)",
+        "BIM BEP (draft BB produced)",
+        "BIM BEP (draft external)",
+        "BIM BEP (final)",
+        "BIM Project Protocol Standard  (draft BB produced)",
+        "BIM Project Protocol Standard  (draft external)",
+        "BIM Project Protocol Standard (final)",
         "Contract Design Responsibility Matrix",
         "Contract Duty of Care (draft)",
         "Contract Duty of Care (signed)",
@@ -127,13 +133,9 @@
         "Letter of compliance"
     ],
     "BIM and Models": [
-        "BIM BEP (draft BB produced)",
-        "BIM BEP (draft external)",
-        "BIM BEP (final)",
+        
         "BIM Clash Rendition (BCF)",
-        "BIM Project Protocol Standard  (draft BB produced)",
-        "BIM Project Protocol Standard  (draft external)",
-        "BIM Project Protocol Standard (final)",
+        "Report Clash Detection",
         "BIM Translators",
         "Library 2D Models Textures (LowRes)",
         "Library 3D Models Objects",

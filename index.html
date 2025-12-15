@@ -65,6 +65,30 @@
     .status {
       color: var(--muted);
       font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      min-height: 50px;
+    }
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .legend-item {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: #0f172a;
+      padding: 4px;
+      line-height: 1;
     }
     .view {
       background: var(--panel);
@@ -278,7 +302,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.5</h1>
+          <h1>Version 1.6</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -331,6 +355,15 @@
         Other: '#d9d9d9',
         Undefined: '#d9d9d9',
       };
+      const LEGEND_ITEMS = [
+        { label: 'Images and Photo', color: CATEGORY_COLORS['Images and Photo'] },
+        { label: 'Texts and Presentations', color: CATEGORY_COLORS['Texts and Presentations'] },
+        { label: 'Schedules and Lists', color: CATEGORY_COLORS['Schedules and Lists'] },
+        { label: 'Contracts and legal', color: CATEGORY_COLORS['Contracts and legal'] },
+        { label: 'BIM and Models', color: CATEGORY_COLORS['BIM and Models'] },
+        { label: 'Drawings', color: CATEGORY_COLORS['Drawings'] },
+        { label: 'Other / Undefined', color: CATEGORY_COLORS.Other },
+      ];
       const DEFAULT_COLOR = '#d9d9d9';
 
       const state = {
@@ -361,7 +394,7 @@
           state.items.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
 
           state.pathGroups = groupByPath(state.items);
-          statusEl.textContent = `Loaded ${state.items.length} items`;
+          renderLegend();
           renderHome();
         } catch (error) {
           console.error(error);
@@ -501,6 +534,21 @@
 
       function categoryForName(name) {
         return state.categoryLookup.get(name) || 'Undefined';
+      }
+
+      function renderLegend() {
+        statusEl.textContent = '';
+        const legend = document.createElement('div');
+        legend.className = 'legend';
+        LEGEND_ITEMS.forEach((entry) => {
+          const item = document.createElement('div');
+          item.className = 'legend-item';
+          item.textContent = entry.label;
+          item.style.backgroundColor = entry.color;
+          item.style.borderColor = entry.color;
+          legend.appendChild(item);
+        });
+        statusEl.appendChild(legend);
       }
     })();
   </script>
