@@ -902,7 +902,7 @@
                 }
             }
         },
-        "Reviews BIM Review": {
+        "BIM Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -913,7 +913,7 @@
                 }
             }
         },
-        "Reviews Compliancy Review": {
+        "Compliancy Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -924,7 +924,7 @@
                 }
             }
         },
-        "Reviews Design Review": {
+        "Design Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -935,7 +935,7 @@
                 }
             }
         },
-        "Reviews Other Reviews": {
+        "Other Reviews": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -946,7 +946,7 @@
                 }
             }
         },
-        "Reviews Sustainability Review": {
+        "Sustainability Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -957,7 +957,7 @@
                 }
             }
         },
-        "Reviews Technical Review": {
+        "Technical Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
