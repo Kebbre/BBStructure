@@ -14,7 +14,7 @@
                 }
             }
         },
-        "BIM_BEP (draft BB produced)": {
+        "BIM BEP (draft BB produced)": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -23,17 +23,17 @@
                 }
             }
         },
-        "BIM_BEP (draft external)": {
+        "BIM BEP (draft external)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "BIM_BEP (final)": {
+        "BIM BEP (final)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "BIM_ClashRendition (BCF)": {
+        "BIM ClashRendition (BCF)": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -42,7 +42,7 @@
                 }
             }
         },
-        "BIM_Project Protocol Standard  (draft BB produced)": {
+        "BIM Project Protocol Standard  (draft BB produced)": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -51,29 +51,29 @@
                 }
             }
         },
-        "BIM_Project Protocol Standard  (draft external )": {
+        "BIM Project Protocol Standard  (draft external)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "BIM_Project Protocol Standard (final)": {
+        "BIM Project Protocol Standard (final)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "BIM_Translators": {
+        "BIM Translators": {
             "0-ProjectLibrary": {
                     "00000 BIMLibrary": {
                         "Translators": {}
                 }
             }
         },
-        "BIM_other contractual documents  (draft external)": {
+        "BIM other contractual documents  (draft external)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "BIM_other contractual documents (draft BB produced))": {
+        "BIM other contractual documents (draft BB produced)": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -82,7 +82,7 @@
                 }
             }
         },
-        "BIM_other contractual documents (final)": {
+        "BIM other contractual documents (final)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
@@ -101,7 +101,7 @@
                 "Issuing party": {}
             }
         },
-        "Calculations_Parking": {
+        "Calculations Parking": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -110,7 +110,7 @@
                 }
             }
         },
-        "Calculations_Toilets": {
+        "Calculations Toilets": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -119,7 +119,7 @@
                 }
             }
         },
-        "Calculations_other": {
+        "Calculations other": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -128,7 +128,7 @@
                 }
             }
         },
-        "Comments_CDP / Subcontractors": {
+        "Comments CDP / Subcontractors": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -139,7 +139,7 @@
                 }
             }
         },
-        "Comments_Designers' pack": {
+        "Comments Designers' pack": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -150,7 +150,7 @@
                 }
             }
         },
-        "Comments_other": {
+        "Comments other": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -161,52 +161,52 @@
                 }
             }
         },
-        "Contract_Design Responsibility Matrix": {
+        "Contract Design Responsibility Matrix": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Contract_Duty of Care (draft)": {
+        "Contract Duty of Care (draft)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Contract_Duty of Care (signed)": {
+        "Contract Duty of Care (signed)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Contract_JCT (draft)": {
+        "Contract JCT (draft)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Contract_JCT (final)": {
+        "Contract JCT (final)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Contract_Other Contract documents (draft)": {
+        "Contract Other Contract documents (draft)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Contract_Other Contract documents (final)": {
+        "Contract Other Contract documents (final)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Contract_Term of engagement (draft)": {
+        "Contract Term of engagement (draft)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Contract_Term of engagement (signed)": {
+        "Contract Term of engagement (signed)": {
             "0-ProjectAdmin": {
                 "Contracts": {}
             }
         },
-        "Correspondence_Record": {
+        "Correspondence Record": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -215,7 +215,7 @@
                 }
             }
         },
-        "DocumentControl_Drawing Register": {
+        "DocumentControl Drawing Register": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -224,7 +224,7 @@
                 }
             }
         },
-        "DocumentControl_Transmittal Sheet": {
+        "DocumentControl Transmittal Sheet": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -233,7 +233,7 @@
                 }
             }
         },
-        "Drawings_DWG_Archive/Superseded": {
+        "Drawings DWG Archive/Superseded": {
             "BondBryan": {
                 "A-Architecture": {
                     "D-Drawing": {
@@ -242,7 +242,7 @@
                 }
             }
         },
-        "Drawings_DWG_Current_Version": {
+        "Drawings DWG Current Version": {
             "BondBryan": {
                 "A-Architecture": {
                     "D-Drawing": {
@@ -251,7 +251,7 @@
                 }
             }
         },
-        "Drawings_DWG_WIP/ToBeChecked": {
+        "Drawings DWG WIP/ToBeChecked": {
             "BondBryan": {
                 "A-Architecture": {
                     "D-Drawing": {
@@ -260,7 +260,7 @@
                 }
             }
         },
-        "Drawings_PDF_Archive/Superseded": {
+        "Drawings PDF Archive/Superseded": {
             "BondBryan": {
                 "A-Architecture": {
                     "D-Drawing": {
@@ -269,7 +269,7 @@
                 }
             }
         },
-        "Drawings_PDF_Current_Version": {
+        "Drawings PDF Current Version": {
             "BondBryan": {
                 "A-Architecture": {
                     "D-Drawing": {
@@ -278,7 +278,7 @@
                 }
             }
         },
-        "Drawings_PDF_WIP/ToBeChecked": {
+        "Drawings PDF WIP/ToBeChecked": {
             "BondBryan": {
                 "A-Architecture": {
                     "D-Drawing": {
@@ -287,49 +287,49 @@
                 }
             }
         },
-        "Fees_Additional Fees_ApprovedConfirmation": {
+        "Fees Additional Fees ApprovedConfirmation": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Approvals": {}
                         }
                     }
                 },
-        "Fees_Additional Fees_calculations": {
+        "Fees Additional Fees calculations": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Calculations 'L'": {}
                         }
                     }
                 },
-        "Fees_Additional Fees_letter": {
+        "Fees Additional Fees letter": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Letters 'T'": {}
                         }
                     }
                 },
-        "Fees_Main Fees_ApprovedConfirmation": {
+        "Fees Main Fees ApprovedConfirmation": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Approvals": {}
                         }
                     }
                 },
-        "Fees_Main Fees_calculations": {
+        "Fees Main Fees calculations": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Calculations 'L'": {}
                         }
                     }
         },
-        "Fees_Main Fees_letter": {
+        "Fees Main Fees letter": {
             "0-ProjectAdmin": {
              "Fees": {
                             "Fees Letters 'T'": {}
                         }
                     }
         },
-        "H&S_Designer Competence Assessment": {
+        "H&S Designer Competence Assessment": {
             "BondBryan": {
                 "O-PrincipalDesigner": {
                 "O-PDCDM": {
@@ -339,7 +339,7 @@
                 }
             }}
         },
-        "H&S_Designer Risk Assessment": {
+        "H&S Designer Risk Assessment": {
             "BondBryan": {"O-PrincipalDesigner": {
                 "O-PDCDM": {
                     "T-Textual": {
@@ -354,45 +354,45 @@
                 "ITT-InvitationToTender":{"Submission": {}}
             }}
         },
-        "ITT_Client_Documentation": {
+        "ITT Client Documentation": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "ITT-InvitationToTender":{"ClientDocumentation": {}}
             }}
         },
-        "ITT_Drawings": {
+        "ITT Drawings": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "ITT-InvitationToTender":{"BBAOriginals": {}}}
         }},
-        "ITT_External_Originals": {
+        "ITT External Originals": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "ITT-InvitationToTender":{"ExternalOriginals": {}}}
             }
         },
-        "ITT_Feedback_and_results": {
+        "ITT Feedback and results": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "ITT-InvitationToTender":{"Submission": {}}}
             }
         },
-        "ITT_Report": {
+        "ITT Report": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "ITT-InvitationToTender":{"BBAOriginals": {}}}
         }},
-        "Images_Precedent": {
+        "Images Precedent": {
             "0-ProjectLibrary": {
                 "Precedents": {}
             }
         },
-        "Incoming_Documents": {
+        "Incoming Documents": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Incoming_Drawings": {
+        "Incoming Drawings": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
@@ -416,21 +416,21 @@
                 }
             }
         },
-        "Library_2D Models Textures (LowRes)": {
+        "Library 2D Models Textures (LowRes)": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "Textures": {}
                 }
             }
         },
-        "Library_3D Models Objects": {
+        "Library 3D Models Objects": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "Objects": {}
                 }
             }
         },
-        "Library_3D_VisualisationObjects": {
+        "Library 3D VisualisationObjects": {
             "BondBryan": {
                 "A-Architecture": {
                     "M-Model": {
@@ -439,14 +439,14 @@
                 }
             }
         },
-        "Library_IFC Library": {
+        "Library IFC Library": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "IFC-Libraries": {}
                 }
             }
         },
-        "Library_RVT Families": {
+        "Library RVT Families": {
             "0-ProjectLibrary": {
                 "00000 BIMLibrary": {
                     "Families": {}
@@ -483,7 +483,7 @@
         "Planning Submission and documents": {
             "0-ProjectMilestones": {"Milestone-PlanningApplicationSubmission": {}}
         },
-        "Minutes (BB_produced)": {
+        "Minutes (BB produced)": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -502,7 +502,7 @@
                 "S-StructuralEngineering": {"YYYY-MM-DD Description": {}  }
             }
         },
-        "Model_Federated": {
+        "Model Federated": {
             "BondBryan": {
                 "A-Architecture": {
                     "M-Model": {
@@ -511,7 +511,7 @@
                 }
             }
         },
-        "Model_IFC (BB produced)": {
+        "Model IFC (BB produced)": {
             "BondBryan": {
                 "A-Architecture": {
                     "M-Model": {
@@ -520,12 +520,12 @@
                 }
             }
         },
-        "Model_IFC (incoming)": {
+        "Model IFC (incoming)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Model_Native (rvt/pln)": {
+        "Model Native (rvt/pln)": {
             "BondBryan": {
                 "A-Architecture": {
                     "M-Model": {
@@ -534,7 +534,7 @@
                 }
             }
         },
-        "Outsourcing_Briefing": {
+        "Outsourcing Briefing": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -543,7 +543,7 @@
                 }
             }
         },
-        "Outsourcing_Comments": {
+        "Outsourcing Comments": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -554,7 +554,7 @@
                 }
             }
         },
-        "Outsourcing_Tracker": {
+        "Outsourcing Tracker": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -593,30 +593,30 @@
                 "PQQ-PreQualificationQuestionnaire":{"Submission": {}}
             }}
         },
-        "PQQ_Client_Documentation": {
+        "PQQ Client Documentation": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "PQQ-PreQualificationQuestionnaire":{"ClientDocumentation": {}}
             }}
         },
-        "PQQ_Drawings": {
+        "PQQ Drawings": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "PQQ-PreQualificationQuestionnaire":{"BBAOriginals": {}}}
         }},
-        "PQQ_External_Originals": {
+        "PQQ External Originals": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "PQQ-PreQualificationQuestionnaire":{"ExternalOriginals": {}}}
             }
         },
-        "PQQ_Feedback_and_results": {
+        "PQQ Feedback and results": {
             "0-ProjectAdmin": {
                 "PreCommission": { 
                       "PQQ-PreQualificationQuestionnaire":{"Submission": {}}}
             }
         },
-        "Photograph_Existing": {
+        "Photograph Existing": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -625,7 +625,7 @@
                 }
             }
         },
-        "Photograph_PostCompletion": {
+        "Photograph PostCompletion": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -634,7 +634,7 @@
                 }
             }
         },
-        "Pictures_Site Visit": {
+        "Pictures Site Visit": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -643,7 +643,7 @@
                 }
             }
         },
-        "Presentation_Main file (Affinity)": {
+        "Presentation Main file (Affinity)": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -652,7 +652,7 @@
                 }
             }
         },
-        "Presentation_Main file (InDesign)": {
+        "Presentation Main file (InDesign)": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -661,7 +661,7 @@
                 }
             }
         },
-        "Presentation_Main file (PowerPoint)": {
+        "Presentation Main file (PowerPoint)": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -670,7 +670,7 @@
                 }
             }
         },
-        "Presentation_Supporting images (Affinity)": {
+        "Presentation Supporting images (Affinity)": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -679,7 +679,7 @@
                 }
             }
         },
-        "Presentation_Supporting images (jpg/png)": {
+        "Presentation Supporting images (jpg/png)": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -693,7 +693,7 @@
                 "Issuing party": {}
             }
         },
-        "Programme (BB_produced)": {
+        "Programme (BB produced)": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -707,7 +707,7 @@
                 "Issuing party": {}
             }
         },
-        "Programme_DEIR (modified)": {
+        "Programme DEIR (modified)": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -716,17 +716,17 @@
                 }
             }
         },
-        "Programme_DEIR (original)": {
+        "Programme DEIR (original)": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Programme_MIDP": {
+        "Programme MIDP": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Programme_TIDP": {
+        "Programme TIDP": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -741,7 +741,7 @@
                     }
                 },
             
-        "Report_Clash Detection": {
+        "Report Clash Detection": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -750,7 +750,7 @@
                 }
             }
         },
-        "Report_Design and Access Statement": {
+        "Report Design and Access Statement": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -759,7 +759,7 @@
                 }
             }
         },
-        "Report_Heat Loss Calculation Report": {
+        "Report Heat Loss Calculation Report": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -768,7 +768,7 @@
                 }
             }
         },
-        "Report_Progress report": {
+        "Report Progress report": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -777,7 +777,7 @@
                 }
             }
         },
-        "Report_Site Visit": {
+        "Report Site Visit": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -786,7 +786,7 @@
                 }
             }
         },
-        "Report_Stage Report": {
+        "Report Stage Report": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -795,7 +795,7 @@
                 }
             }
         },
-        "Report_Supporting images (Affinity)": {
+        "Report Supporting images (Affinity)": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -804,7 +804,7 @@
                 }
             }
         },
-        "Report_Supporting images (jpg/png)": {
+        "Report Supporting images (jpg/png)": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -813,7 +813,7 @@
                 }
             }
         },
-        "Report_Thermal Bridging": {
+        "Report Thermal Bridging": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -822,7 +822,7 @@
                 }
             }
         },
-        "Reviews_BIM Review": {
+        "Reviews BIM Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -833,7 +833,7 @@
                 }
             }
         },
-        "Reviews_Compliancy Review": {
+        "Reviews Compliancy Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -844,7 +844,7 @@
                 }
             }
         },
-        "Reviews_Design Review": {
+        "Reviews Design Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -855,7 +855,7 @@
                 }
             }
         },
-        "Reviews_Other Reviews": {
+        "Reviews Other Reviews": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -866,7 +866,7 @@
                 }
             }
         },
-        "Reviews_Sustainability Review": {
+        "Reviews Sustainability Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -877,7 +877,7 @@
                 }
             }
         },
-        "Reviews_Technical Review": {
+        "Reviews Technical Review": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -888,7 +888,7 @@
                 }
             }
         },
-        "Room_Data_Sheets (RDS)": {
+        "Room Data Sheets (RDS)": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -910,7 +910,7 @@
                 }
             }
         },
-        "Schedule_Change Control": {
+        "Schedule Change Control": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -919,7 +919,7 @@
                 }
             }
         },
-        "Schedule_Elements Schedules (windows, doors,\u2026)": {
+        "Schedule Elements Schedules (windows, doors,\u2026)": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -930,7 +930,7 @@
                 }
             }
         },
-        "Schedule_Finishes": {
+        "Schedule Finishes": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -941,7 +941,7 @@
                 }
             }
         },
-        "Schedule_Sanitaryware schedule": {
+        "Schedule Sanitaryware schedule": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -954,7 +954,7 @@
                 }
             }
         },
-        "Schedule_other": {
+        "Schedule other": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -963,7 +963,7 @@
                 }
             }
         },
-        "Sketch_ideas": {
+        "Sketch ideas": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -972,7 +972,7 @@
                 }
             }
         },
-        "Specifications_BB produced document": {
+        "Specifications BB produced document": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -981,7 +981,7 @@
                 }
             }
         },
-        "Specifications_incoming doc": {
+        "Specifications incoming doc": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
@@ -991,7 +991,7 @@
                 "StandardsAndGuidance": {}
             }
         },
-        "Strategic_Brief Development": {
+        "Strategic Brief Development": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -1000,7 +1000,7 @@
                 }
             }
         },
-        "Strategic_Headcount List": {
+        "Strategic Headcount List": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -1009,7 +1009,7 @@
                 }
             }
         },
-        "Strategic_Investment appraisals and cost": {
+        "Strategic Investment appraisals and cost": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -1018,7 +1018,7 @@
                 }
             }
         },
-        "Strategic_Options Development": {
+        "Strategic Options Development": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -1027,7 +1027,7 @@
                 }
             }
         },
-        "Strategic_Space Need analysis": {
+        "Strategic Space Need analysis": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -1036,27 +1036,27 @@
                 }
             }
         },
-        "Survey_Cetopo_file (2D/3D)": {
+        "Survey Cetopo file (2D/3D)": {
             "ExternalDisciplines": {
                 "Y-3DMapping": {}
             }
         },
-        "Survey_GoogleMap / orthophoto": {
+        "Survey GoogleMap / orthophoto": {
             "ExternalDisciplines": {
                 "Y-2DMapping": {}
             }
         },
-        "Survey_Incoming": {
+        "Survey Incoming": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Survey_OS_Map (2D)": {
+        "Survey OS Map (2D)": {
             "ExternalDisciplines": {
                 "Y-2DMapping": {}
             }
         },
-        "Sustainability_Carbon Assessments": {
+        "Sustainability Carbon Assessments": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -1067,7 +1067,7 @@
                 }
             }
         },
-        "Sustainability_Project Briefing Document": {
+        "Sustainability Project Briefing Document": {
             "BondBryan": {
                 "A-Architecture": {
                     "T-Textual": {
@@ -1076,7 +1076,7 @@
                 }
             }
         },
-        "Visualisation_Output Images": {
+        "Visualisation Output Images": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -1085,7 +1085,7 @@
                 }
             }
         },
-        "Visualisation_files export": {
+        "Visualisation files export": {
             "BondBryan": {
                 "A-Architecture": {
                     "M-Model": {
@@ -1094,7 +1094,7 @@
                 }
             }
         },
-        "Visualisation_files native": {
+        "Visualisation files native": {
             "BondBryan": {
                 "A-Architecture": {
                     "M-Model": {
@@ -1103,7 +1103,7 @@
                 }
             }
         },
-        "Visualisations_Output Video": {
+        "Visualisations Output Video": {
             "BondBryan": {
                 "A-Architecture": {
                     "V-VideoAudio": {

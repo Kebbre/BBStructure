@@ -43,6 +43,7 @@
       margin: 0;
       font-weight: 700;
       letter-spacing: -0.01em;
+      font-size: 0.6rem;
     }
     .eyebrow {
       margin: 0;
@@ -72,24 +73,28 @@
       padding: 8px 0 24px;
     }
     .card {
-      flex: 0 1 200px;
+      flex: 0 0 200px;
       width: 200px;
       height: 200px;
       max-width: 100%;
       background: #ffffff;
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 0;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 1.1rem;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--ink);
-      padding: 24px;
+      padding: 16px;
       cursor: pointer;
       transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
       box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+      word-break: break-word;
+      white-space: normal;
+      line-height: 1;
+      letter-spacing: -0.02em;
     }
     .card:hover {
       transform: translateY(-6px);
@@ -174,7 +179,7 @@
     <header>
       <div class="heading">
         <p class="eyebrow">List of files</p>
-        <h1>Version 1.0</h1>
+        <h1>Version 1.1</h1>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
     </header>
@@ -208,6 +213,8 @@
       const subtitleEl = document.getElementById('location-subtitle');
       const relatedList = document.getElementById('related-list');
       const homeBtn = document.getElementById('home-btn');
+
+      const brandColors = ['#00ccde', '#ff8fad', '#ff8200', '#fff229', '#5cba45', '#d1c9ba'];
 
       const state = {
         items: [],
@@ -275,6 +282,9 @@
           card.type = 'button';
           card.className = 'card';
           card.textContent = item.name;
+          const color = pickBrandColor();
+          card.style.backgroundColor = color;
+          card.style.borderColor = color;
           card.addEventListener('click', () => renderDetail(item));
           cardGrid.appendChild(card);
         });
@@ -323,6 +333,11 @@
         homeView.classList.toggle('hidden', !isHome);
         detailView.classList.toggle('hidden', isHome);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function pickBrandColor() {
+        const index = Math.floor(Math.random() * brandColors.length);
+        return brandColors[index];
       }
     })();
   </script>
