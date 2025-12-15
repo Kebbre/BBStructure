@@ -1,0 +1,1134 @@
+{
+    "List of files": {
+        "Agenda (Incoming)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Agenda (BB Produced)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "2000-Agenda": {}
+                    }
+                }
+            }
+        },
+        "BIM_BEP (draft BB produced)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "BIM_BEP (draft external)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "BIM_BEP (final)": {
+            "0-ProjectAdmin": {
+                "Contracts": {}
+            }
+        },
+        "BIM_ClashRendition (BCF)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "BIM_Project Protocol Standard  (draft BB produced)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "BIM_Project Protocol Standard  (draft external )": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "BIM_Project Protocol Standard (final)": {
+            "0-ProjectAdmin": {
+                "Contracts": {}
+            }
+        },
+        "BIM_Translators": {
+            "0-ProjectLibrary": {
+                    "00000 BIMLibrary": {
+                        "Translators": {}
+                }
+            }
+        },
+        "BIM_other contractual documents  (draft external)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "BIM_other contractual documents (draft BB produced))": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "BIM_other contractual documents (final)": {
+            "0-ProjectAdmin": {
+                "Contracts": {}
+            }
+        },
+        "Building Control tracker (modified)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "4000-Trackers": {}
+                    }
+                }
+            }
+        },
+        "Building Control tracker (original)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Calculations_Parking": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "6000-Calculations": {}
+                    }
+                }
+            }
+        },
+        "Calculations_Toilets": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "6000-Calculations": {}
+                    }
+                }
+            }
+        },
+        "Calculations_other": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "6000-Calculations": {}
+                    }
+                }
+            }
+        },
+        "Comments_CDP / Subcontractors": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "5000-Comments": {
+                            "5100-Subcontractor / CDP": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Comments_Designers' pack": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "5000-Comments": {
+                            "5300-Design": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Comments_other": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "5000-Comments": {
+                            "5700-OtherComments": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Contract_Design Responsibility Matrix": {
+            "0-ProjectAdmin": {
+                "Contracts": {}
+            }
+        },
+        "Contract_Duty of Care (draft)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Contract_Duty of Care (signed)": {
+            "0-ProjectAdmin": {
+                "Contracts": {}
+            }
+        },
+        "Contract_JCT (draft)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Contract_JCT (final)": {
+            "0-ProjectAdmin": {
+                "Contracts": {}
+            }
+        },
+        "Contract_Other Contract documents (draft)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Contract_Other Contract documents (final)": {
+            "0-ProjectAdmin": {
+                "Contracts": {}
+            }
+        },
+        "Contract_Term of engagement (draft)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Contract_Term of engagement (signed)": {
+            "0-ProjectAdmin": {
+                "Contracts": {}
+            }
+        },
+        "Correspondence_Record": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "1000-Correspondence": {}
+                    }
+                }
+            }
+        },
+        "DocumentControl_Drawing Register": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "2000-Transmittals": {}
+                    }
+                }
+            }
+        },
+        "DocumentControl_Transmittal Sheet": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "2000-Transmittals": {}
+                    }
+                }
+            }
+        },
+        "Drawings_DWG_Archive/Superseded": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "D-Drawing": {
+                        "Archive": {}
+                    }
+                }
+            }
+        },
+        "Drawings_DWG_Current_Version": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "D-Drawing": {
+                        "Shared": {}
+                    }
+                }
+            }
+        },
+        "Drawings_DWG_WIP/ToBeChecked": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "D-Drawing": {
+                        "WIP": {}
+                    }
+                }
+            }
+        },
+        "Drawings_PDF_Archive/Superseded": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "D-Drawing": {
+                        "Archive": {}
+                    }
+                }
+            }
+        },
+        "Drawings_PDF_Current_Version": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "D-Drawing": {
+                        "Shared": {}
+                    }
+                }
+            }
+        },
+        "Drawings_PDF_WIP/ToBeChecked": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "D-Drawing": {
+                        "WIP": {}
+                    }
+                }
+            }
+        },
+        "Fees_Additional Fees_ApprovedConfirmation": {
+            "0-ProjectAdmin": {
+             "Fees": {
+                            "Fees Approvals": {}
+                        }
+                    }
+                },
+        "Fees_Additional Fees_calculations": {
+            "0-ProjectAdmin": {
+             "Fees": {
+                            "Fees Calculations 'L'": {}
+                        }
+                    }
+                },
+        "Fees_Additional Fees_letter": {
+            "0-ProjectAdmin": {
+             "Fees": {
+                            "Fees Letters 'T'": {}
+                        }
+                    }
+                },
+        "Fees_Main Fees_ApprovedConfirmation": {
+            "0-ProjectAdmin": {
+             "Fees": {
+                            "Fees Approvals": {}
+                        }
+                    }
+                },
+        "Fees_Main Fees_calculations": {
+            "0-ProjectAdmin": {
+             "Fees": {
+                            "Fees Calculations 'L'": {}
+                        }
+                    }
+        },
+        "Fees_Main Fees_letter": {
+            "0-ProjectAdmin": {
+             "Fees": {
+                            "Fees Letters 'T'": {}
+                        }
+                    }
+        },
+        "H&S_Designer Competence Assessment": {
+            "BondBryan": {
+                "O-PrincipalDesigner": {
+                "O-PDCDM": {
+                    "T-Textual": {
+                        "5000-9999 Files": {}
+                    }
+                }
+            }}
+        },
+        "H&S_Designer Risk Assessment": {
+            "BondBryan": {"O-PrincipalDesigner": {
+                "O-PDCDM": {
+                    "T-Textual": {
+                        "5000-9999 Files": {}
+                    }
+                }
+            }}
+        },
+        "ITT-Submission": {
+            "0-ProjectAdmin": {
+                "PreCommission": {
+                "ITT-InvitationToTender":{"Submission": {}}
+            }}
+        },
+        "ITT_Client_Documentation": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "ITT-InvitationToTender":{"ClientDocumentation": {}}
+            }}
+        },
+        "ITT_Drawings": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "ITT-InvitationToTender":{"BBAOriginals": {}}}
+        }},
+        "ITT_External_Originals": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "ITT-InvitationToTender":{"ExternalOriginals": {}}}
+            }
+        },
+        "ITT_Feedback_and_results": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "ITT-InvitationToTender":{"Submission": {}}}
+            }
+        },
+        "ITT_Report": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "ITT-InvitationToTender":{"BBAOriginals": {}}}
+        }},
+        "Images_Precedent": {
+            "0-ProjectLibrary": {
+                "Precedents": {}
+            }
+        },
+        "Incoming_Documents": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Incoming_Drawings": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Interior specific Documents  (appointed)": {
+            "BondBryan": {
+                "I-InteriorDesign": {}
+            }
+        },
+        "Landscape Documents  (appointed)": {
+            "BondBryan": {
+                "L-LandscapeArchitecture": {}
+            }
+        },
+        "Letter of compliance": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "1000-Correspondence": {}
+                    }
+                }
+            }
+        },
+        "Library_2D Models Textures (LowRes)": {
+            "0-ProjectLibrary": {
+                "00000 BIMLibrary": {
+                    "Textures": {}
+                }
+            }
+        },
+        "Library_3D Models Objects": {
+            "0-ProjectLibrary": {
+                "00000 BIMLibrary": {
+                    "Objects": {}
+                }
+            }
+        },
+        "Library_3D_VisualisationObjects": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "M-Model": {
+                        "3000-VisualisationsModels": {}
+                    }
+                }
+            }
+        },
+        "Library_IFC Library": {
+            "0-ProjectLibrary": {
+                "00000 BIMLibrary": {
+                    "IFC-Libraries": {}
+                }
+            }
+        },
+        "Library_RVT Families": {
+            "0-ProjectLibrary": {
+                "00000 BIMLibrary": {
+                    "Families": {}
+                }
+            }
+        },
+        "Logos": {
+            "0-ProjectLibrary": {
+                "Logos": {}
+            }
+        },
+        "Method Statement": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "0000-NotesAndStatements": {}
+                    }
+                }
+            }
+        },
+        "File Note": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "0000-NotesAndStatements": {}
+                    }
+                }
+            }
+        },
+        
+        "Milestone Records (Drawings, reports, contracts\u2026)": {
+            "0-ProjectMilestones": {}
+        },
+        "Planning Submission and documents": {
+            "0-ProjectMilestones": {"Milestone-PlanningApplicationSubmission": {}}
+        },
+        "Minutes (BB_produced)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "3000-Minutes": {}
+                    }
+                }
+            }
+        },
+        "Minutes (Incoming)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Structural engineer's Documents": {
+            "ExternalDisciplines": {
+                "S-StructuralEngineering": {"YYYY-MM-DD Description": {}  }
+            }
+        },
+        "Model_Federated": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "M-Model": {
+                        "1000-FederatedModels": {}
+                    }
+                }
+            }
+        },
+        "Model_IFC (BB produced)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "M-Model": {
+                        "2000-IFCModels": {}
+                    }
+                }
+            }
+        },
+        "Model_IFC (incoming)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Model_Native (rvt/pln)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "M-Model": {
+                        "4000-NativeModels": {}
+                    }
+                }
+            }
+        },
+        "Outsourcing_Briefing": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "Outsourcing_Comments": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "5000-Comments": {
+                            "5500-Outsourcing": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Outsourcing_Tracker": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "7000-Outsourcing": {}
+                    }
+                }
+            }
+        },
+        "PDBR Documents (appointed)": {
+            "BondBryan": {"O-PrincipalDesigner": {
+                "O-PDBR": {}
+            }}
+        },
+        "PDCDM Documents  (appointed)": {
+            "BondBryan": {"O-PrincipalDesigner": {
+                "O-PDCDM": {}
+            }}
+        },
+        "PDBR Documents (external)": {
+            "ExternalDisciplines": {
+                "O-PrincipalDesigner": {
+                    "0-PDBR": {}
+                }
+            }
+        },
+        "PDCDM Documents  (external)": {
+               "ExternalDisciplines": {
+                "O-PrincipalDesigner": {
+                    "0-PDCDM": {}
+                }
+            }
+        },
+                "PQQ-Submission": {
+              "0-ProjectAdmin": {
+                "PreCommission": {           
+                "PQQ-PreQualificationQuestionnaire":{"Submission": {}}
+            }}
+        },
+        "PQQ_Client_Documentation": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "PQQ-PreQualificationQuestionnaire":{"ClientDocumentation": {}}
+            }}
+        },
+        "PQQ_Drawings": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "PQQ-PreQualificationQuestionnaire":{"BBAOriginals": {}}}
+        }},
+        "PQQ_External_Originals": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "PQQ-PreQualificationQuestionnaire":{"ExternalOriginals": {}}}
+            }
+        },
+        "PQQ_Feedback_and_results": {
+            "0-ProjectAdmin": {
+                "PreCommission": { 
+                      "PQQ-PreQualificationQuestionnaire":{"Submission": {}}}
+            }
+        },
+        "Photograph_Existing": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "2000-ProjectPhotography": {}
+                    }
+                }
+            }
+        },
+        "Photograph_PostCompletion": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "2000-ProjectPhotography": {}
+                    }
+                }
+            }
+        },
+        "Pictures_Site Visit": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "2000-ProjectPhotography": {}
+                    }
+                }
+            }
+        },
+        "Presentation_Main file (Affinity)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "6000-Presentations": {}
+                    }
+                }
+            }
+        },
+        "Presentation_Main file (InDesign)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "6000-Presentations": {}
+                    }
+                }
+            }
+        },
+        "Presentation_Main file (PowerPoint)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "6000-Presentations": {}
+                    }
+                }
+            }
+        },
+        "Presentation_Supporting images (Affinity)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "1000-PresentationImages": {}
+                    }
+                }
+            }
+        },
+        "Presentation_Supporting images (jpg/png)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "1000-PresentationImages": {}
+                    }
+                }
+            }
+        },
+        "Product reference": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Programme (BB_produced)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "1000-Programmes": {}
+                    }
+                }
+            }
+        },
+        "Programme (incoming)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Programme_DEIR (modified)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "1000-Programmes": {}
+                    }
+                }
+            }
+        },
+        "Programme_DEIR (original)": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Programme_MIDP": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Programme_TIDP": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "1000-Programmes": {}
+                    }
+                }
+            }
+        },
+        "Project Directory": {
+            "0-ProjectAdmin": {
+                "ProjectDirectory": {}
+                    }
+                },
+            
+        "Report_Clash Detection": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "4000-Reports": {}
+                    }
+                }
+            }
+        },
+        "Report_Design and Access Statement": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "4000-Reports": {}
+                    }
+                }
+            }
+        },
+        "Report_Heat Loss Calculation Report": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "4000-Reports": {}
+                    }
+                }
+            }
+        },
+        "Report_Progress report": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "4000-Reports": {}
+                    }
+                }
+            }
+        },
+        "Report_Site Visit": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "4000-Reports": {}
+                    }
+                }
+            }
+        },
+        "Report_Stage Report": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "4000-Reports": {}
+                    }
+                }
+            }
+        },
+        "Report_Supporting images (Affinity)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "1000-PresentationImages": {}
+                    }
+                }
+            }
+        },
+        "Report_Supporting images (jpg/png)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "1000-PresentationImages": {}
+                    }
+                }
+            }
+        },
+        "Report_Thermal Bridging": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "4000-Reports": {}
+                    }
+                }
+            }
+        },
+        "Reviews_BIM Review": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "8000-ProjectReviews": {
+                            "8300-BIMReviews": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Reviews_Compliancy Review": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "8000-ProjectReviews": {
+                            "8400-CompliancyReviews": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Reviews_Design Review": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "8000-ProjectReviews": {
+                            "8000-DesignReviews": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Reviews_Other Reviews": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "8000-ProjectReviews": {
+                            "8500-OtherReviews": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Reviews_Sustainability Review": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "8000-ProjectReviews": {
+                            "8200-SustainabilityReviews": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Reviews_Technical Review": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "8000-ProjectReviews": {
+                            "8100-TechnicalReviews": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Room_Data_Sheets (RDS)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "5000-RoomDataSheets": {}
+                    }
+                }
+            }
+        },
+        "Schedule of accommodation": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "0000-ProjectSchedules": {
+                            "Shared": {
+                                "0000-AreaSchedules": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Schedule_Change Control": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "3000-Change Control": {}
+                    }
+                }
+            }
+        },
+        "Schedule_Elements Schedules (windows, doors,\u2026)": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "0000-ProjectSchedules": {
+                            "Shared": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Schedule_Finishes": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "0000-ProjectSchedules": {
+                            "Shared": {"0600-FinishesSchedules": {}}
+                        }
+                    }
+                }
+            }
+        },
+        "Schedule_Sanitaryware schedule": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "0000-ProjectSchedules": {
+                            "Shared": {
+                                "0700-OtherSchedules": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Schedule_other": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "Sketch_ideas": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "4000-Sketches": {}
+                    }
+                }
+            }
+        },
+        "Specifications_BB produced document": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "7000-Specifications": {}
+                    }
+                }
+            }
+        },
+        "Specifications_incoming doc": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Standards and guidance (outside of contract)": {
+            "0-ProjectLibrary": {
+                "StandardsAndGuidance": {}
+            }
+        },
+        "Strategic_Brief Development": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "Strategic_Headcount List": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "8000-StrategicLists": {}
+                    }
+                }
+            }
+        },
+        "Strategic_Investment appraisals and cost": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "8000-StrategicLists": {}
+                    }
+                }
+            }
+        },
+        "Strategic_Options Development": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "Strategic_Space Need analysis": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "L-List": {
+                        "8000-StrategicLists": {}
+                    }
+                }
+            }
+        },
+        "Survey_Cetopo_file (2D/3D)": {
+            "ExternalDisciplines": {
+                "Y-3DMapping": {}
+            }
+        },
+        "Survey_GoogleMap / orthophoto": {
+            "ExternalDisciplines": {
+                "Y-2DMapping": {}
+            }
+        },
+        "Survey_Incoming": {
+            "ExternalDisciplines": {
+                "Issuing party": {}
+            }
+        },
+        "Survey_OS_Map (2D)": {
+            "ExternalDisciplines": {
+                "Y-2DMapping": {}
+            }
+        },
+        "Sustainability_Carbon Assessments": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "8000-ProjectReviews": {
+                            "8200-SustainabilityReviews": {}
+                        }
+                    }
+                }
+            }
+        },
+        "Sustainability_Project Briefing Document": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "T-Textual": {
+                        "9000-Miscellaneous": {}
+                    }
+                }
+            }
+        },
+        "Visualisation_Output Images": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "I-Image": {
+                        "3000-Visualisations": {}
+                    }
+                }
+            }
+        },
+        "Visualisation_files export": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "M-Model": {
+                        "3000-VisualisationsModels": {}
+                    }
+                }
+            }
+        },
+        "Visualisation_files native": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "M-Model": {
+                        "3000-VisualisationsModels": {}
+                    }
+                }
+            }
+        },
+        "Visualisations_Output Video": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "V-VideoAudio": {
+                        "1000-Visualisations": {}
+                    }
+                }
+            }
+        },
+        "Audio Recording": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "V-VideoAudio": {
+                        "3000-AudioFilesOnly": {}
+                    }
+                }
+            }
+        },
+        "Video": {
+            "BondBryan": {
+                "A-Architecture": {
+                    "V-VideoAudio": {
+                        "2000-OtherVideo": {}
+                    }
+                }
+            }
+        }
+    }
+}

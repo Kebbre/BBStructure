@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List of Files Browser</title>
+  <style>
+    :root {
+      --bg: #e9eef6;
+      --panel: #ffffff;
+      --ink: #0f172a;
+      --muted: #5b6475;
+      --accent: #1d4ed8;
+      --border: #d7dce5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 25% 20%, #f5f7fb, #dfe5f1 40%, #d8deed 65%, #cdd4e5);
+      color: var(--ink);
+    }
+    main {
+      min-height: 100vh;
+      padding: 24px clamp(16px, 4vw, 48px) 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .heading {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    h1 {
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .eyebrow {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .status {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .view {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: clamp(16px, 3vw, 28px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+    }
+    .hidden { display: none; }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 8px 0 24px;
+    }
+    .card {
+      flex: 0 1 400px;
+      width: 400px;
+      height: 400px;
+      max-width: 100%;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      padding: 24px;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.07);
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
+      border-color: #c3c9d6;
+    }
+    .breadcrumb {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--ink);
+    }
+    .crumb-part {
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: #eef2fb;
+      border: 1px solid var(--border);
+    }
+    .crumb-sep { color: var(--muted); }
+    .location {
+      margin-bottom: 16px;
+    }
+    .location h2 {
+      margin: 0 0 4px 0;
+      font-size: 1.6rem;
+      letter-spacing: -0.01em;
+    }
+    .muted {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0 24px 0;
+      padding: 0;
+      list-style: none;
+    }
+    .pill {
+      background: #f5f6fb;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .footer {
+      margin-top: 28px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    button.btn {
+      border: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent), #1e3a8a);
+      box-shadow: 0 10px 24px rgba(29, 78, 216, 0.25);
+      transition: transform 0.14s ease, box-shadow 0.14s ease;
+    }
+    button.btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(29, 78, 216, 0.32);
+    }
+    @media (max-width: 640px) {
+      main { padding: 16px 12px 32px; }
+      .card { flex-basis: 90vw; width: 90vw; height: 90vw; }
+      .breadcrumb { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="heading">
+        <p class="eyebrow">List of files</p>
+        <h1>Browse items</h1>
+      </div>
+      <div class="status" id="status">Loading List of files V4.json…</div>
+    </header>
+
+    <section id="home-view" class="view">
+      <div class="card-grid" id="card-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="detail-view" class="view hidden">
+      <div class="breadcrumb" id="breadcrumb"></div>
+      <div class="location">
+        <h2 id="location-title"></h2>
+        <p class="muted" id="location-subtitle"></p>
+      </div>
+      <h3>Items in this location</h3>
+      <ul class="pill-list" id="related-list"></ul>
+      <div class="footer">
+        <button class="btn" id="home-btn" type="button">Home</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function() {
+      const statusEl = document.getElementById('status');
+      const cardGrid = document.getElementById('card-grid');
+      const homeView = document.getElementById('home-view');
+      const detailView = document.getElementById('detail-view');
+      const breadcrumbEl = document.getElementById('breadcrumb');
+      const titleEl = document.getElementById('location-title');
+      const subtitleEl = document.getElementById('location-subtitle');
+      const relatedList = document.getElementById('related-list');
+      const homeBtn = document.getElementById('home-btn');
+
+      const state = {
+        items: [],
+        pathGroups: new Map(),
+      };
+
+      homeBtn.addEventListener('click', () => switchView('home'));
+
+      init();
+
+      async function init() {
+        try {
+          const response = await fetch('List of files V4.json');
+          if (!response.ok) throw new Error('Unable to load List of files V4.json');
+
+          const data = await response.json();
+          const root = data['List of files'] || data;
+          state.items = Object.entries(root || {}).map(([name, branch]) => ({
+            name,
+            path: findFirstLeafPath(branch),
+          }));
+
+          state.pathGroups = groupByPath(state.items);
+          statusEl.textContent = `Loaded ${state.items.length} items`;
+          renderHome();
+        } catch (error) {
+          console.error(error);
+          statusEl.textContent = 'Failed to load List of files V4.json';
+          cardGrid.innerHTML = '<p>Check that the JSON file sits next to this HTML file.</p>';
+        }
+      }
+
+      function findFirstLeafPath(node) {
+        if (!node || typeof node !== 'object') return [];
+        const entries = Object.entries(node);
+        if (!entries.length) return [];
+        const [key, value] = entries[0];
+        return [key, ...findFirstLeafPath(value)];
+      }
+
+      function groupByPath(items) {
+        const map = new Map();
+        items.forEach((item) => {
+          const key = pathKey(item.path);
+          const bucket = map.get(key) || [];
+          bucket.push(item.name);
+          map.set(key, bucket);
+        });
+        return map;
+      }
+
+      function pathKey(pathArray) {
+        return (pathArray || []).join(' > ');
+      }
+
+      function renderHome() {
+        cardGrid.innerHTML = '';
+        if (!state.items.length) {
+          cardGrid.innerHTML = '<p>No items found in List of files V4.json</p>';
+          return;
+        }
+
+        state.items.forEach((item) => {
+          const card = document.createElement('button');
+          card.type = 'button';
+          card.className = 'card';
+          card.textContent = item.name;
+          card.addEventListener('click', () => renderDetail(item));
+          cardGrid.appendChild(card);
+        });
+
+        switchView('home');
+      }
+
+      function renderDetail(item) {
+        const key = pathKey(item.path);
+        breadcrumbEl.innerHTML = '';
+
+        if (item.path.length) {
+          item.path.forEach((part, index) => {
+            const span = document.createElement('span');
+            span.className = 'crumb-part';
+            span.textContent = part;
+            breadcrumbEl.appendChild(span);
+            if (index < item.path.length - 1) {
+              const sep = document.createElement('span');
+              sep.className = 'crumb-sep';
+              sep.textContent = '›';
+              breadcrumbEl.appendChild(sep);
+            }
+          });
+        } else {
+          breadcrumbEl.textContent = 'No path found';
+        }
+
+        titleEl.textContent = key || item.name;
+        subtitleEl.textContent = `Selected: ${item.name}`;
+
+        const related = state.pathGroups.get(key) || [item.name];
+        relatedList.innerHTML = '';
+        related.forEach((entry) => {
+          const li = document.createElement('li');
+          li.className = 'pill';
+          li.textContent = entry;
+          relatedList.appendChild(li);
+        });
+
+        switchView('detail');
+      }
+
+      function switchView(view) {
+        const isHome = view === 'home';
+        homeView.classList.toggle('hidden', !isHome);
+        detailView.classList.toggle('hidden', isHome);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    })();
+  </script>
+</body>
+</html>
