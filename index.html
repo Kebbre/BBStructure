@@ -34,6 +34,16 @@
       gap: 16px;
       flex-wrap: wrap;
     }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo {
+      height: 55px;
+      width: auto;
+      display: block;
+    }
     .heading {
       display: flex;
       flex-direction: column;
@@ -68,14 +78,14 @@
       display: flex;
       flex-wrap: wrap;
       gap: 18px;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-start;
       padding: 8px 0 24px;
     }
     .card {
-      flex: 0 0 200px;
-      width: 200px;
-      height: 200px;
+      flex: 0 0 150px;
+      width: 150px;
+      height: 150px;
       max-width: 100%;
       background: #ffffff;
       border: 1px solid var(--border);
@@ -169,7 +179,6 @@
     }
     @media (max-width: 640px) {
       main { padding: 16px 12px 32px; }
-      .card { flex-basis: 90vw; width: 90vw; height: 90vw; }
       .breadcrumb { font-size: 0.95rem; }
     }
   </style>
@@ -177,9 +186,12 @@
 <body>
   <main>
     <header>
-      <div class="heading">
-        <p class="eyebrow">List of files</p>
-        <h1>Version 1.1</h1>
+      <div class="brand">
+        <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
+        <div class="heading">
+          <p class="eyebrow">List of files</p>
+          <h1>Version 1.2</h1>
+        </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
     </header>
@@ -236,6 +248,7 @@
             name,
             path: findFirstLeafPath(branch),
           }));
+          state.items.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
 
           state.pathGroups = groupByPath(state.items);
           statusEl.textContent = `Loaded ${state.items.length} items`;
