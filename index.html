@@ -66,8 +66,10 @@
       color: var(--muted);
       font-size: 0.95rem;
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 8px;
       min-height: 50px;
     }
     .legend {
@@ -327,6 +329,16 @@
       color: var(--muted);
       font-size: 0.95rem;
     }
+    .keyword-input {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 0.95rem;
+      min-width: 220px;
+      color: var(--ink);
+      background: #ffffff;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+    }
     @media (max-width: 900px) {
       .detail-layout {
         grid-template-columns: 1fr;
@@ -357,7 +369,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.17</h1>
+          <h1>Version 1.18</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -434,6 +446,7 @@
         categoryLookup: new Map(),
         selectedCategories: new Set(),
         currentSelection: null,
+        keyword: '',
       };
 
       homeBtn.addEventListener('click', () => switchView('home'));
@@ -531,12 +544,19 @@
       function renderHome(options = {}) {
         const { skipSwitch = false } = options;
         cardGrid.innerHTML = '';
-        if (!state.items.length) {
-          cardGrid.innerHTML = '<p>No items found in List of files V4.json</p>';
+        const filteredItems = state.items.filter((item) => matchesKeyword(item.name));
+        if (!filteredItems.length) {
+          const msg = document.createElement('p');
+          const hasData = state.items.length > 0;
+          const hasKeyword = Boolean((state.keyword || '').trim());
+          msg.textContent = hasData && hasKeyword
+            ? `No items match "${state.keyword}".`
+            : 'No items found in List of files V4.json';
+          cardGrid.appendChild(msg);
           return;
         }
 
-        state.items.forEach((item) => {
+        filteredItems.forEach((item) => {
           const card = document.createElement('button');
           card.type = 'button';
           card.className = 'card';
@@ -581,7 +601,7 @@
         });
       }
 
-      function renderDetailView({ title, colorName, path, folder, leafName }) {
+      function renderDetailView({ title, colorName, path, folder, leafName, skipSwitch = false }) {
         renderBreadcrumb(path, leafName);
         applyColorStyles(selectedCard, colorName, { ignoreFilter: true });
         selectedTitle.textContent = title;
@@ -589,7 +609,7 @@
 
         renderSubfolders(folder);
         renderItemsInLocation(folder, leafName);
-        switchView('detail');
+        if (!skipSwitch) switchView('detail');
       }
 
       function renderBreadcrumb(path = [], leafName) {
@@ -656,6 +676,7 @@
         itemsGrid.innerHTML = '';
         const items = [...(folder?.items || [])]
           .filter((entry) => !currentLeaf || entry !== currentLeaf)
+          .filter((entry) => matchesKeyword(entry))
           .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 
         if (!items.length) {
@@ -708,6 +729,12 @@
         element.style.color = styles.text;
       }
 
+      function matchesKeyword(value) {
+        const term = (state.keyword || '').trim().toLowerCase();
+        if (!term) return true;
+        return String(value || '').toLowerCase().includes(term);
+      }
+
       function categoryForName(name) {
         return state.categoryLookup.get(name) || 'Undefined';
       }
@@ -737,6 +764,35 @@
         subfolderGrid.querySelectorAll('.related-card').forEach((btn) => {
           applyColorStyles(btn, 'Undefined', { ignoreFilter: true });
         });
+      }
+
+      function rerenderCurrentDetail() {
+        if (!state.currentSelection || detailView.classList.contains('hidden')) return;
+        if (state.currentSelection.type === 'item') {
+          const item = state.items.find((entry) => entry.name === state.currentSelection.name);
+          if (!item) return;
+          const folderPath = item.path || [];
+          const folder = getFolderAtPath(folderPath) || state.tree;
+          const breadcrumbPath = folderPath.slice(0, Math.max(folderPath.length - 1, 0));
+          renderDetailView({
+            title: item.name,
+            colorName: item.name,
+            path: breadcrumbPath,
+            folder,
+            leafName: item.name,
+            skipSwitch: true,
+          });
+        } else {
+          const folder = getFolderAtPath(state.currentSelection.path) || state.tree;
+          renderDetailView({
+            title: folder?.name || 'Folder',
+            colorName: 'Undefined',
+            path: folder?.path || [],
+            folder,
+            leafName: null,
+            skipSwitch: true,
+          });
+        }
       }
 
       function toggleLegend(entry) {
@@ -783,6 +839,25 @@
         wrap.appendChild(label);
         wrap.appendChild(legend);
         statusEl.appendChild(wrap);
+
+        const keywordWrap = document.createElement('div');
+        keywordWrap.className = 'legend-wrap';
+        const keywordLabel = document.createElement('div');
+        keywordLabel.className = 'legend-label';
+        keywordLabel.textContent = 'Keyword';
+        const keywordInput = document.createElement('input');
+        keywordInput.type = 'text';
+        keywordInput.className = 'keyword-input';
+        keywordInput.placeholder = 'Type to filter...';
+        keywordInput.value = state.keyword;
+        keywordInput.addEventListener('input', (event) => {
+          state.keyword = event.target.value || '';
+          renderHome({ skipSwitch: true });
+          rerenderCurrentDetail();
+        });
+        keywordWrap.appendChild(keywordLabel);
+        keywordWrap.appendChild(keywordInput);
+        statusEl.appendChild(keywordWrap);
       }
     })();
   </script>
