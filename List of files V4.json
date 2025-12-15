@@ -33,7 +33,7 @@
                 "Contracts": {}
             }
         },
-        "BIM ClashRendition (BCF)": {
+        "BIM Clash Rendition (BCF)": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -392,21 +392,13 @@
                 "Issuing party": {}
             }
         },
+        
         "Incoming Drawings": {
             "ExternalDisciplines": {
                 "Issuing party": {}
             }
         },
-        "Interior specific Documents  (appointed)": {
-            "BondBryan": {
-                "I-InteriorDesign": {}
-            }
-        },
-        "Landscape Documents  (appointed)": {
-            "BondBryan": {
-                "L-LandscapeArchitecture": {}
-            }
-        },
+        
         "Letter of compliance": {
             "BondBryan": {
                 "A-Architecture": {
@@ -502,6 +494,16 @@
                 "S-StructuralEngineering": {"YYYY-MM-DD Description": {}  }
             }
         },
+        "Structural engineer's Drawings": {
+            "ExternalDisciplines": {
+                "S-StructuralEngineering": {"YYYY-MM-DD Description": {}  }
+            }
+        },
+        "Structural engineer's Models": {
+            "ExternalDisciplines": {
+                "S-StructuralEngineering": {"YYYY-MM-DD Description": {}  }
+            }
+        },
         "Model Federated": {
             "BondBryan": {
                 "A-Architecture": {
@@ -580,11 +582,89 @@
                 }
             }
         },
+        "PDCDM Lists  (external)": {
+               "ExternalDisciplines": {
+                "O-PrincipalDesigner": {
+                    "0-PDCDM": {}
+                }
+            }
+        },
+        "Interior specific Documents  (appointed)": {
+            "BondBryan": {
+                "I-InteriorDesign": {}
+            }
+        },
+        "Landscape Documents  (appointed)": {
+            "BondBryan": {
+                "L-LandscapeArchitecture": {}
+            }
+        },
+        "PDBR Lists (appointed)": {
+            "BondBryan": {"O-PrincipalDesigner": {
+                "O-PDBR": {}
+            }}
+        },
+        "PDCDM Lists  (appointed)": {
+            "BondBryan": {"O-PrincipalDesigner": {
+                "O-PDCDM": {}
+            }}
+        },
+        "PDBR Lists (external)": {
+            "ExternalDisciplines": {
+                "O-PrincipalDesigner": {
+                    "0-PDBR": {}
+                }
+            }
+        },
         "PDCDM Documents  (external)": {
                "ExternalDisciplines": {
                 "O-PrincipalDesigner": {
                     "0-PDCDM": {}
                 }
+            }
+        },
+        "Interior specific Drawings  (appointed)": {
+            "BondBryan": {
+                "I-InteriorDesign": {}
+            }
+        },
+        "Landscape Drawings  (appointed)": {
+            "BondBryan": {
+                "L-LandscapeArchitecture": {}
+            }
+        },
+        "PDBR Drawings (appointed)": {
+            "BondBryan": {"O-PrincipalDesigner": {
+                "O-PDBR": {}
+            }}
+        },
+        "PDCDM Drawings  (appointed)": {
+            "BondBryan": {"O-PrincipalDesigner": {
+                "O-PDCDM": {}
+            }}
+        },
+        "PDBR Drawings (external)": {
+            "ExternalDisciplines": {
+                "O-PrincipalDesigner": {
+                    "0-PDBR": {}
+                }
+            }
+        },
+        "PDCDM Drawings  (external)": {
+               "ExternalDisciplines": {
+                "O-PrincipalDesigner": {
+                    "0-PDCDM": {}
+                }
+            }
+        },
+        "Interior specific Lists  (appointed)": {
+            "BondBryan": {
+                "I-InteriorDesign": {}
+            }
+        },
+        "Landscape Lists  (appointed)": {
+            "BondBryan": {
+                "L-LandscapeArchitecture": {}
             }
         },
                 "PQQ-Submission": {

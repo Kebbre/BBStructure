@@ -278,7 +278,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.4</h1>
+          <h1>Version 1.5</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -321,11 +321,22 @@
       const relatedGrid = document.getElementById('related-grid');
       const homeBtn = document.getElementById('home-btn');
 
-      const brandColors = ['#00ccde', '#ff8fad', '#ff8200', '#fff229', '#5cba45', '#d1c9ba'];
+      const CATEGORY_COLORS = {
+        'Images and Photo': '#00ccde',
+        'Texts and Presentations': '#ff8fad',
+        'Schedules and Lists': '#ff8200',
+        'Contracts and legal': '#fff229',
+        'BIM and Models': '#5cba45',
+        'Drawings': '#d1c9ba',
+        Other: '#d9d9d9',
+        Undefined: '#d9d9d9',
+      };
+      const DEFAULT_COLOR = '#d9d9d9';
 
       const state = {
         items: [],
         pathGroups: new Map(),
+        categoryLookup: new Map(),
       };
 
       homeBtn.addEventListener('click', () => switchView('home'));
@@ -334,11 +345,15 @@
 
       async function init() {
         try {
-          const response = await fetch('List of files V4.json');
-          if (!response.ok) throw new Error('Unable to load List of files V4.json');
+          statusEl.textContent = 'Loading data…';
+          const [filesData, catData] = await Promise.all([
+            fetchJson('List of files V4.json', 'List of files V4.json'),
+            fetchJson('Files Cat.json', 'Files Cat.json'),
+          ]);
 
-          const data = await response.json();
-          const root = data['List of files'] || data;
+          state.categoryLookup = buildCategoryLookup(catData);
+
+          const root = filesData['List of files'] || filesData;
           state.items = Object.entries(root || {}).map(([name, branch]) => ({
             name,
             path: findFirstLeafPath(branch),
@@ -350,9 +365,28 @@
           renderHome();
         } catch (error) {
           console.error(error);
-          statusEl.textContent = 'Failed to load List of files V4.json';
-          cardGrid.innerHTML = '<p>Check that the JSON file sits next to this HTML file.</p>';
+          statusEl.textContent = 'Failed to load data';
+          cardGrid.innerHTML = '<p>Check that List of files V4.json and Files Cat.json sit next to this HTML file.</p>';
         }
+      }
+
+      async function fetchJson(path, label) {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`Unable to load ${label}`);
+        return response.json();
+      }
+
+      function buildCategoryLookup(catData) {
+        const map = new Map();
+        if (!catData || typeof catData !== 'object') return map;
+        Object.entries(catData).forEach(([category, items]) => {
+          if (Array.isArray(items)) {
+            items.forEach((item) => {
+              if (typeof item === 'string') map.set(item, category);
+            });
+          }
+        });
+        return map;
       }
 
       function findFirstLeafPath(node) {
@@ -393,6 +427,7 @@
           const color = colorForName(item.name);
           card.style.backgroundColor = color;
           card.style.borderColor = color;
+          card.setAttribute('aria-label', `${item.name} (${categoryForName(item.name)})`);
           card.addEventListener('click', () => renderDetail(item));
           cardGrid.appendChild(card);
         });
@@ -460,13 +495,12 @@
       }
 
       function colorForName(name) {
-        let hash = 0;
-        for (let i = 0; i < name.length; i += 1) {
-          hash = ((hash << 5) - hash) + name.charCodeAt(i);
-          hash |= 0;
-        }
-        const index = Math.abs(hash) % brandColors.length;
-        return brandColors[index];
+        const category = categoryForName(name);
+        return CATEGORY_COLORS[category] || DEFAULT_COLOR;
+      }
+
+      function categoryForName(name) {
+        return state.categoryLookup.get(name) || 'Undefined';
       }
     })();
   </script>
