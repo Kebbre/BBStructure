@@ -369,7 +369,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.19</h1>
+          <h1>Version 1.20</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -396,7 +396,7 @@
                 <div class="related-grid" id="subfolder-grid"></div>
               </div>
               <div class="related-section">
-                <h3>Other items in this location</h3>
+                <h3>Other items in this folder</h3>
                 <div class="related-grid" id="items-grid"></div>
               </div>
             </div>
@@ -682,7 +682,7 @@
         if (!items.length) {
           const empty = document.createElement('p');
           empty.className = 'placeholder';
-          empty.textContent = 'No items here';
+          empty.textContent = 'No other items here';
           itemsGrid.appendChild(empty);
           return;
         }
