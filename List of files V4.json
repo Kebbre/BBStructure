@@ -215,7 +215,7 @@
                 }
             }
         },
-        "DocumentControl Drawing Register": {
+        "Drawing Register": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
@@ -224,7 +224,7 @@
                 }
             }
         },
-        "DocumentControl Transmittal Sheet": {
+        "Transmittal Sheet": {
             "BondBryan": {
                 "A-Architecture": {
                     "L-List": {
