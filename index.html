@@ -43,6 +43,7 @@
       height: 55px;
       width: auto;
       display: block;
+      cursor: pointer;
     }
     .heading {
       display: flex;
@@ -169,9 +170,9 @@
       align-items: stretch;
     }
     .path-panel {
-      background: #f7f8fc;
-      border: 1px solid var(--border);
-      border-radius: 0px;
+      background: #e6f0cf;
+      border: none;
+      border-radius: 0;
       padding: 10px;
       display: flex;
       flex-direction: column;
@@ -221,43 +222,18 @@
       color: var(--ink);
       line-height: 1.1;
     }
-    .home-icon-btn {
-      margin-bottom: 8px;
+    .home-btn {
+      margin-bottom: 6px;
       align-self: flex-start;
-      width: 31px;
-      height: 31px;
-      border-radius: 0px;
-      border: 1px solid #c5c8d2;
-      background: linear-gradient(180deg, #f8f9fc 0%, #e5e7ee 100%);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      position: relative;
+      border: none;
+      background: none;
+      padding: 0;
+      font-size: 0.75rem;
+      font-weight: 650;
+      color: var(--ink);
       cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-    .home-icon-btn::before {
-      content: "";
-      position: absolute;
-      bottom: 8px;
-      left: 7px;
-      width: 16px;
-      height: 11px;
-      background: #d7d8dc;
-      border: 1px solid #8d919c;
-      border-radius: 2px 2px 4px 4px;
-      box-sizing: border-box;
-    }
-    .home-icon-btn::after {
-      content: "";
-      position: absolute;
-      bottom: 17px;
-      left: 6px;
-      border-left: 9px solid transparent;
-      border-right: 9px solid transparent;
-      border-bottom: 8px solid #b7bbc5;
-    }
-    .home-icon-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      text-decoration: underline;
+      text-align: left;
     }
     .detail-main {
       display: flex;
@@ -348,7 +324,7 @@
         align-items: flex-start;
         flex-wrap: wrap;
       }
-      .home-icon-btn {
+      .home-btn {
         margin-top: 0;
         margin-left: 0;
       }
@@ -366,10 +342,10 @@
   <main>
     <header>
       <div class="brand">
-        <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo">
+        <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo" id="logo-btn">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.23</h1>
+          <h1>Version 1.24</h1>
         </div>
       </div>
       <div class="status" id="status">Loading List of files V4.json…</div>
@@ -382,7 +358,7 @@
     <section id="detail-view" class="view hidden">
       <div class="detail-layout">
         <aside class="path-panel">
-          <button class="home-icon-btn" id="home-btn" type="button" aria-label="Home"></button>
+          <button class="home-btn" id="home-btn" type="button" aria-label="Project Folder">Project Folder</button>
           <div class="path-list" id="path-list"></div>
         </aside>
         <div class="detail-main">
@@ -418,6 +394,7 @@
       const subfolderGrid = document.getElementById('subfolder-grid');
       const itemsGrid = document.getElementById('items-grid');
       const homeBtn = document.getElementById('home-btn');
+      const logoBtn = document.getElementById('logo-btn');
 
       const CATEGORY_COLORS = {
         'Images and Photo': '#00ccde',
@@ -449,7 +426,8 @@
         keyword: '',
       };
 
-      homeBtn.addEventListener('click', () => switchView('home'));
+      homeBtn.addEventListener('click', goHome);
+      logoBtn?.addEventListener('click', goHome);
 
       init();
 
@@ -539,6 +517,10 @@
         if (!entries.length) return [];
         const [key, value] = entries[0];
         return [key, ...findFirstLeafPath(value)];
+      }
+
+      function goHome() {
+        renderHome();
       }
 
       function renderHome(options = {}) {
