@@ -2,7 +2,7 @@
     "List of files": {
         "Agenda (Incoming)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Agenda (BB Produced)": {
@@ -25,7 +25,7 @@
         },
         "BIM BEP (draft external)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "BIM BEP (final)": {
@@ -53,7 +53,7 @@
         },
         "BIM Project Protocol Standard  (draft external)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "BIM Project Protocol Standard (final)": {
@@ -70,7 +70,7 @@
         },
         "BIM other contractual documents  (draft external)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "BIM other contractual documents (draft BB produced)": {
@@ -98,7 +98,7 @@
         },
         "Building Control tracker (original)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Calculations Parking": {
@@ -168,7 +168,7 @@
         },
         "Duty of Care (draft)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Duty of Care (signed)": {
@@ -178,7 +178,7 @@
         },
         "JCT Contract (draft)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "JCT Contract (final)": {
@@ -188,7 +188,7 @@
         },
         "Other Contract documents (draft)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Other Contract documents (final)": {
@@ -198,7 +198,7 @@
         },
         "Term of engagement (draft)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Term of engagement (signed)": {
@@ -389,13 +389,13 @@
         },
         "Incoming Documents": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         
         "Incoming Drawings": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         
@@ -486,7 +486,7 @@
         },
         "Minutes (Incoming)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Structural engineer's Documents": {
@@ -524,7 +524,7 @@
         },
         "Model IFC (incoming)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Model Native (rvt/pln)": {
@@ -752,7 +752,7 @@
         },
         "Product reference": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Programme (BB produced)": {
@@ -766,7 +766,7 @@
         },
         "Programme (incoming)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "DEIR (modified)": {
@@ -780,12 +780,12 @@
         },
         "DEIR (original)": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "MIDP": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "TIDP": {
@@ -1045,7 +1045,7 @@
         },
         "Specifications incoming doc": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Standards and guidance (outside of contract)": {
@@ -1110,7 +1110,7 @@
         },
         "Survey Incoming": {
             "ExternalDisciplines": {
-                "Issuing party": {}
+                "Relevant issuing discipline": {}
             }
         },
         "Survey OS Map (2D)": {
