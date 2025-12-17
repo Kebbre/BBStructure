@@ -714,7 +714,7 @@
                 }
             }
         },
-        "Pictures Site Visit": {
+        "Pictures Site visit report": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -746,24 +746,6 @@
                 "A-Architecture": {
                     "T-Textual": {
                         "6000-Presentations": {}
-                    }
-                }
-            }
-        },
-        "Presentation Supporting images (Affinity)": {
-            "BondBryan": {
-                "A-Architecture": {
-                    "I-Image": {
-                        "1000-PresentationImages": {}
-                    }
-                }
-            }
-        },
-        "Presentation Supporting images (jpg/png)": {
-            "BondBryan": {
-                "A-Architecture": {
-                    "I-Image": {
-                        "1000-PresentationImages": {}
                     }
                 }
             }
@@ -875,7 +857,7 @@
                 }
             }
         },
-        "Supporting images (Affinity)": {
+        "Supporting images reports / presentation (Affinity)": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
@@ -884,7 +866,7 @@
                 }
             }
         },
-        "Supporting images (jpg/png)": {
+        "Supporting images reports / presentation (jpg/png)": {
             "BondBryan": {
                 "A-Architecture": {
                     "I-Image": {
