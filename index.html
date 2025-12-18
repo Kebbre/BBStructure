@@ -345,10 +345,10 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo" id="logo-btn">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 1.24</h1>
+          <h1>Version 2.0</h1>
         </div>
       </div>
-      <div class="status" id="status">Loading List of files V4.json…</div>
+      <div class="status" id="status">Loading Files.json…</div>
     </header>
 
     <section id="home-view" class="view">
@@ -420,7 +420,7 @@
       const state = {
         items: [],
         tree: createFolderNode('Root', []),
-        categoryLookup: new Map(),
+        categoryLookup: new Map(), // Map<string, string[]>
         selectedCategories: new Set(),
         currentSelection: null,
         keyword: '',
@@ -434,16 +434,12 @@
       async function init() {
         try {
           statusEl.textContent = 'Loading data…';
-          const [filesData, catData] = await Promise.all([
-            fetchJson('List of files V4.json', 'List of files V4.json'),
-            fetchJson('Files Cat.json', 'Files Cat.json'),
-          ]);
+          const combined = await fetchJson('Files.json', 'Files.json');
 
-          state.categoryLookup = buildCategoryLookup(catData);
+          state.categoryLookup = buildCategoryLookup(combined);
           state.selectedCategories = new Set(allCategories());
 
-          const root = filesData['List of files'] || filesData;
-          const { treeRoot, items } = buildTree(root);
+          const { treeRoot, items } = buildTree(combined);
           state.tree = treeRoot;
           state.items = items;
           state.items.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }));
@@ -453,7 +449,7 @@
         } catch (error) {
           console.error(error);
           statusEl.textContent = 'Failed to load data';
-          cardGrid.innerHTML = '<p>Check that List of files V4.json and Files Cat.json sit next to this HTML file.</p>';
+          cardGrid.innerHTML = '<p>Check that Files.json sits next to this HTML file.</p>';
         }
       }
 
@@ -463,24 +459,21 @@
         return response.json();
       }
 
-      function buildCategoryLookup(catData) {
+      function buildCategoryLookup(combinedData) {
         const map = new Map();
-        if (!catData || typeof catData !== 'object') return map;
-        Object.entries(catData).forEach(([category, items]) => {
-          if (Array.isArray(items)) {
-            items.forEach((item) => {
-              if (typeof item === 'string') map.set(item, category);
-            });
-          }
+        if (!combinedData || typeof combinedData !== 'object') return map;
+        Object.entries(combinedData).forEach(([name, meta]) => {
+          const categories = parseCategories(meta?.Category);
+          map.set(name, categories);
         });
         return map;
       }
 
-      function buildTree(filesRoot) {
+      function buildTree(filesData) {
         const treeRoot = createFolderNode('Root', []);
         const items = [];
-        Object.entries(filesRoot || {}).forEach(([name, branch]) => {
-          const path = findFirstLeafPath(branch);
+        Object.entries(filesData || {}).forEach(([name, meta]) => {
+          const path = parsePath(meta?.Path);
           items.push({ name, path });
           insertItem(treeRoot, path, name);
         });
@@ -511,12 +504,17 @@
         return pointer;
       }
 
-      function findFirstLeafPath(node) {
-        if (!node || typeof node !== 'object') return [];
-        const entries = Object.entries(node);
-        if (!entries.length) return [];
-        const [key, value] = entries[0];
-        return [key, ...findFirstLeafPath(value)];
+      function parseCategories(value) {
+        if (!value || typeof value !== 'string') return ['Undefined'];
+        const parts = value.split('|').map((part) => part.trim()).filter(Boolean);
+        return parts.length ? parts : ['Undefined'];
+      }
+
+      function parsePath(value) {
+        if (!value || typeof value !== 'string') return [];
+        const first = value.split('|')[0].trim();
+        if (!first) return [];
+        return first.split('/').map((part) => part.trim()).filter(Boolean);
       }
 
       function goHome() {
@@ -533,7 +531,7 @@
           const hasKeyword = Boolean((state.keyword || '').trim());
           msg.textContent = hasData && hasKeyword
             ? `No items match "${state.keyword}".`
-            : 'No items found in List of files V4.json';
+            : 'No items found in Files.json';
           cardGrid.appendChild(msg);
           return;
         }
@@ -695,10 +693,10 @@
 
       function colorStylesForName(name, options = {}) {
         const { ignoreFilter = false } = options;
-        const category = categoryForName(name);
-        const selected = ignoreFilter ? true : isCategorySelected(category);
+        const categories = categoriesForName(name);
+        const selected = ignoreFilter ? true : categories.some((cat) => state.selectedCategories.has(cat));
+        const color = CATEGORY_COLORS[categories[0]] || DEFAULT_COLOR;
         if (selected) {
-          const color = CATEGORY_COLORS[category] || DEFAULT_COLOR;
           return { background: color, border: color, text: '#0f172a' };
         }
         return { background: '#ffffff', border: '#cdd4e5', text: '#6b7280' };
@@ -717,12 +715,13 @@
         return String(value || '').toLowerCase().includes(term);
       }
 
-      function categoryForName(name) {
-        return state.categoryLookup.get(name) || 'Undefined';
+      function categoriesForName(name) {
+        return state.categoryLookup.get(name) || ['Undefined'];
       }
 
-      function isCategorySelected(category) {
-        return state.selectedCategories.has(category);
+      function categoryForName(name) {
+        const list = categoriesForName(name);
+        return list[0] || 'Undefined';
       }
 
       function allCategories() {
