@@ -599,11 +599,6 @@
         "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
         "Description": "Drawings focusing on CDM/safety provided by an external Principal Designer. External safety drawings; include in project info and ensure compliance with them."
     },
-    "PDCDM Drawings (external)": {
-        "Category": "Drawings",
-        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
-        "Description": "Drawings focusing on CDM (safety) considerations provided by an external Principal Designer. External safety drawings; integrate these with project documents and address any safety issues."
-    },
     "PDCDM Lists  (appointed)": {
         "Category": "Schedules and Lists",
         "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
