@@ -1,8 +1,13 @@
 {
+    "2D Textures (HighRes)": {
+        "Category": "Images and Photo",
+        "Path": "BondBryan/A-Architecture/I-Image/5000-OtherImages",
+        "Description": "High-resolution 2D texture images to be reduced to max 800 x 800px for use in BIM model. Do not import high-res textures in BIM model."
+    },
     "2D Textures (LowRes)": {
         "Category": "BIM and Models",
         "Path": "0-ProjectLibrary/00000 BIMLibrary/Textures",
-        "Description": "Low-resolution 2D texture images for BIM models to avoid large library files. Stored in the project BIM library; use for quick visualisations or placeholders."
+        "Description": "Low-resolution (max 800 x 800px) 2D texture images for BIM models to avoid large library files. Stored in the project BIM library; use for quick visualisations or placeholders."
     },
     "3D Models Objects": {
         "Category": "BIM and Models",
@@ -203,6 +208,11 @@
         "Category": "Texts and Presentations",
         "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8400-CompliancyReviews",
         "Description": "Review document checking project compliance with specific standards or requirements. Internal compliance check; identify any issues to resolve for regulatory or client requirements."
+    },
+    "Construction Record Drawings": {
+        "Category": "Drawings",
+        "Path": "0-ProjectMilestones/RIBA Stage 5-Construction",
+        "Description": "Final set of drawings showing the project as actually constructed. Do not issue 'As-built' but 'Construction Record'."
     },
     "Correspondence Record": {
         "Category": "Texts and Presentations",
@@ -699,6 +709,16 @@
         "Path": "0-ProjectAdmin/ProjectDirectory",
         "Description": "Directory of project contacts, listing key team members and their contact information. Keep this updated as personnel change - also on Rapport3 / external team."
     },
+    "Project Quality Management Plan": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
+        "Description": "Outlines the quality assurance and control procedures for the project. Use as a reference for QA process expectations at all phases."
+    },
+    "Request for Information (RFI)": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/X-Subcontractors/Relevant issuing company",
+        "Description": "Log of RFIs raised by contractors and the corresponding clarifications provided by the design team. Helps track unresolved or pending technical clarifications."
+    },
     "RIBA Stage Completion": {
         "Category": "Drawings",
         "Path": "0-ProjectMilestones/Relevant RIBA stage",
@@ -733,6 +753,11 @@
         "Category": "Drawings",
         "Path": "BondBryan/A-Architecture/I-Image/4000-Sketches",
         "Description": "Collection of sketch drawings and conceptual ideas for the project. Internal creative drawings; use these for brainstorming and early client discussions."
+    },
+    "Snagging Lists": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/9000-Miscellaneous",
+        "Description": "List of issues or incomplete works to be addressed before project handover. Coordinate with final inspections and closeout documentation."
     },
     "Specifications BB produced document": {
         "Category": "Texts and Presentations",
@@ -848,6 +873,11 @@
         "Category": "Texts and Presentations",
         "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8100-TechnicalReviews",
         "Description": "Technical review report examining the design for technical quality and compliance. Internal design QA/QC document; address any issues identified to maintain technical excellence."
+    },
+    "Tender Queries and Responses": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/X-Client",
+        "Description": "Compilation of questions from bidders and formal responses issued during the tender process. Ensure updates are reflected in Addenda if applicable."
     },
     "Term of engagement (draft)": {
         "Category": "Contracts and legal",
