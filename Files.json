@@ -579,11 +579,6 @@
         "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDBR",
         "Description": "Compliance lists or schedules from an external Principal Designer (Building Regulations). External compliance lists; verify all items are addressed in internal documents."
     },
-    "PDBR Lists(appointed)": {
-        "Category": "Schedules and Lists",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDBR",
-        "Description": "Lists or schedules maintained by the appointed Principal Designer (Building Regulations). Internal compliance lists; keep them updated and ensure all requirements are captured."
-    },
     "PDCDM Documents  (appointed)": {
         "Category": "Texts and Presentations",
         "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
@@ -618,16 +613,6 @@
         "Category": "Schedules and Lists",
         "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
         "Description": "Lists or schedules from an external Principal Designer under CDM (e.g., risk assessments, registers). External H&S lists; ensure all items are tracked and addressed in project planning."
-    },
-    "PDCDM Lists (appointed)": {
-        "Category": "Schedules and Lists",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
-        "Description": "Lists or registers maintained by the appointed Principal Designer (CDM) for safety compliance. Internal PD CDM lists; keep them current and coordinate any issues with external parties."
-    },
-    "PDCDM Lists (external)": {
-        "Category": "Schedules and Lists",
-        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
-        "Description": "Lists or registers from an external Principal Designer (CDM) outlining safety or compliance tasks. External PD CDM lists; verify coverage of all points in internal risk management."
     },
     "Photograph Existing": {
         "Category": "Images and Photo",
