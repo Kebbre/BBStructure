@@ -300,6 +300,16 @@
       word-break: break-word;
       white-space: normal;
     }
+    .description-wrap {
+      max-width: 760px;
+    }
+    .item-description {
+      margin: 0;
+      font-weight: 500;
+      font-size: 0.65rem;
+      line-height: 1.4;
+      color: var(--ink);
+    }
     .placeholder {
       margin: 0;
       color: var(--muted);
@@ -345,7 +355,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo" id="logo-btn">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 2.0</h1>
+          <h1>Version 2.1</h1>
         </div>
       </div>
       <div class="status" id="status">Loading Files.json…</div>
@@ -377,6 +387,9 @@
               </div>
             </div>
           </div>
+          <div class="description-wrap hidden" id="description-wrap">
+            <p class="item-description" id="item-description"></p>
+          </div>
         </div>
       </div>
     </section>
@@ -393,6 +406,8 @@
       const selectedTitle = document.getElementById('selected-title');
       const subfolderGrid = document.getElementById('subfolder-grid');
       const itemsGrid = document.getElementById('items-grid');
+      const descriptionWrap = document.getElementById('description-wrap');
+      const descriptionEl = document.getElementById('item-description');
       const homeBtn = document.getElementById('home-btn');
       const logoBtn = document.getElementById('logo-btn');
 
@@ -424,6 +439,7 @@
         selectedCategories: new Set(),
         currentSelection: null,
         keyword: '',
+        metaLookup: new Map(),
       };
 
       homeBtn.addEventListener('click', goHome);
@@ -436,6 +452,7 @@
           statusEl.textContent = 'Loading data…';
           const combined = await fetchJson('Files.json', 'Files.json');
 
+          state.metaLookup = buildMetaLookup(combined);
           state.categoryLookup = buildCategoryLookup(combined);
           state.selectedCategories = new Set(allCategories());
 
@@ -469,12 +486,22 @@
         return map;
       }
 
+      function buildMetaLookup(combinedData) {
+        const map = new Map();
+        if (!combinedData || typeof combinedData !== 'object') return map;
+        Object.entries(combinedData).forEach(([name, meta]) => {
+          map.set(name, meta || {});
+        });
+        return map;
+      }
+
       function buildTree(filesData) {
         const treeRoot = createFolderNode('Root', []);
         const items = [];
         Object.entries(filesData || {}).forEach(([name, meta]) => {
           const path = parsePath(meta?.Path);
-          items.push({ name, path });
+          const description = typeof meta?.Description === 'string' ? meta.Description : '';
+          items.push({ name, path, description });
           insertItem(treeRoot, path, name);
         });
         return { treeRoot, items };
@@ -555,6 +582,7 @@
         const folderPath = item.path || [];
         const folder = getFolderAtPath(folderPath) || state.tree;
         const breadcrumbPath = folderPath.slice(0, Math.max(folderPath.length - 1, 0));
+        const description = descriptionForName(item.name);
         state.currentSelection = { type: 'item', name: item.name, path: item.path };
         state.selectedCategories = new Set(allCategories());
         renderLegend();
@@ -564,6 +592,7 @@
           path: breadcrumbPath,
           folder,
           leafName: item.name,
+          description,
         });
       }
 
@@ -578,10 +607,11 @@
           path: folder?.path || [],
           folder,
           leafName: null,
+          description: '',
         });
       }
 
-      function renderDetailView({ title, colorName, path, folder, leafName, skipSwitch = false }) {
+      function renderDetailView({ title, colorName, path, folder, leafName, description = '', skipSwitch = false }) {
         renderBreadcrumb(path, leafName);
         applyColorStyles(selectedCard, colorName, { ignoreFilter: true });
         selectedTitle.textContent = title;
@@ -589,6 +619,7 @@
 
         renderSubfolders(folder);
         renderItemsInLocation(folder, leafName);
+        renderDescription(description, leafName);
         if (!skipSwitch) switchView('detail');
       }
 
@@ -683,6 +714,13 @@
         });
       }
 
+      function renderDescription(description, leafName) {
+        if (!descriptionWrap || !descriptionEl) return;
+        const show = Boolean(description) && Boolean(leafName);
+        descriptionWrap.classList.toggle('hidden', !show);
+        descriptionEl.textContent = show ? description : '';
+      }
+
       function switchView(view) {
         const isHome = view === 'home';
         if (isHome) state.currentSelection = null;
@@ -724,6 +762,12 @@
         return list[0] || 'Undefined';
       }
 
+      function descriptionForName(name) {
+        const meta = state.metaLookup.get(name);
+        if (!meta) return '';
+        return typeof meta.Description === 'string' ? meta.Description : '';
+      }
+
       function allCategories() {
         return LEGEND_ITEMS.flatMap((entry) => entry.categories || []);
       }
@@ -755,12 +799,14 @@
           const folderPath = item.path || [];
           const folder = getFolderAtPath(folderPath) || state.tree;
           const breadcrumbPath = folderPath.slice(0, Math.max(folderPath.length - 1, 0));
+          const description = descriptionForName(item.name);
           renderDetailView({
             title: item.name,
             colorName: item.name,
             path: breadcrumbPath,
             folder,
             leafName: item.name,
+            description,
             skipSwitch: true,
           });
         } else {
@@ -771,6 +817,7 @@
             path: folder?.path || [],
             folder,
             leafName: null,
+            description: '',
             skipSwitch: true,
           });
         }
