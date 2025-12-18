@@ -1,0 +1,927 @@
+{
+    "2D Textures (LowRes)": {
+        "Category": "BIM and Models",
+        "Path": "0-ProjectLibrary/00000 BIMLibrary/Textures",
+        "Description": ""
+    },
+    "3D Models Objects": {
+        "Category": "BIM and Models",
+        "Path": "0-ProjectLibrary/00000 BIMLibrary/Objects",
+        "Description": ""
+    },
+    "3D Visualisation Objects": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/M-Model/3000-VisualisationsModels",
+        "Description": ""
+    },
+    "3DS/Lumion File": {
+        "Category": "BIM and Models",
+        "Path": "Visualiser server",
+        "Description": ""
+    },
+    "Additional Fees approved": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Fees/Fees Approvals",
+        "Description": ""
+    },
+    "Additional Fees calculations": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Fees/Fees Calculations 'L'",
+        "Description": ""
+    },
+    "Additional Fees letter": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Fees/Fees Letters 'T'",
+        "Description": ""
+    },
+    "Agenda (BB Produced)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/2000-Agenda",
+        "Description": ""
+    },
+    "Agenda (Incoming)": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "AI Generated visualisations": {
+        "Category": "Images and Photo",
+        "Path": "BondBryan/A-Architecture/I-Image/3000-Visualisations",
+        "Description": ""
+    },
+    "Audio Recording": {
+        "Category": "Other | Undefined",
+        "Path": "BondBryan/A-Architecture/V-VideoAudio/3000-AudioFilesOnly",
+        "Description": ""
+    },
+    "Backup models (rvt/pln)": {
+        "Category": "BIM and Models",
+        "Path": "0-ProjectMilestones/Backup-ArchivedBIMModels",
+        "Description": ""
+    },
+    "Balconies information": {
+        "Category": "Drawings",
+        "Path": "ExternalDisciplines/X-Subcontractors/Balconies",
+        "Description": ""
+    },
+    "Bespoke rulesets (solibri)": {
+        "Category": "BIM and Models",
+        "Path": "0-ProjectLibrary/00000 BIMLibrary/Translators",
+        "Description": ""
+    },
+    "BIM BEP (draft BB produced)": {
+        "Category": "Contracts and legal",
+        "Path": "BondBryan/A-Architecture/T-Textual/9000-Miscellaneous",
+        "Description": ""
+    },
+    "BIM BEP (draft external)": {
+        "Category": "Contracts and legal",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "BIM BEP (final)": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Contracts",
+        "Description": ""
+    },
+    "BIM Clash Rendition (BCF)": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/L-List/9000-Miscellaneous",
+        "Description": ""
+    },
+    "BIM other contractual documents  (draft external)": {
+        "Category": "Contracts and legal",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "BIM other contractual documents (draft BB produced)": {
+        "Category": "Contracts and legal",
+        "Path": "BondBryan/A-Architecture/T-Textual/9000-Miscellaneous",
+        "Description": ""
+    },
+    "BIM other contractual documents (final)": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Contracts",
+        "Description": ""
+    },
+    "BIM Project Protocol Standard  (draft BB produced)": {
+        "Category": "Contracts and legal",
+        "Path": "BondBryan/A-Architecture/T-Textual/9000-Miscellaneous",
+        "Description": ""
+    },
+    "BIM Project Protocol Standard  (draft external)": {
+        "Category": "Contracts and legal",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "BIM Project Protocol Standard (final)": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Contracts",
+        "Description": ""
+    },
+    "BIM Review": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8300-BIMReviews",
+        "Description": ""
+    },
+    "BIM Translators": {
+        "Category": "BIM and Models",
+        "Path": "0-ProjectLibrary/00000 BIMLibrary/Translators",
+        "Description": ""
+    },
+    "BREEAM / LEED submission": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/O-SustainabilityConsultant/YYYY-MM-DD Description",
+        "Description": ""
+    },
+    "British Standard (project related)": {
+        "Category": "Undefined",
+        "Path": "0-ProjectLibrary/StandardsAndGuidance",
+        "Description": ""
+    },
+    "Building Control Submission": {
+        "Category": "Texts and Presentations",
+        "Path": "0-ProjectMilestones/Milestone-BuildingRegulationsSubmission",
+        "Description": ""
+    },
+    "Building Control tracker (modified)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/4000-Trackers",
+        "Description": ""
+    },
+    "Building Control tracker (original)": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/T-BuildingControl",
+        "Description": ""
+    },
+    "Calculations Parking": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/6000-Calculations",
+        "Description": ""
+    },
+    "Calculations Toilets": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/6000-Calculations",
+        "Description": ""
+    },
+    "CDP drawings": {
+        "Category": "Drawings" ,
+        "Path": "ExternalDisciplines/X-Subcontractors/Relevant issuing company",
+        "Description": ""
+    },
+    "CEM Presentation": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/6000-Presentations",
+        "Description": ""
+    },
+    "Change Control": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/3000-Change Control",
+        "Description": ""
+    },
+    "Clash detection report": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
+        "Description": ""
+    },
+    "COBie / Data client report": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/O-InformationManager/YYYY-MM-DD Description",
+        "Description": ""
+    },
+    "Comments CDP / Subcontractors": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/5000-Comments/5100-Subcontractor / CDP",
+        "Description": ""
+    },
+    "Comments Designers' pack": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/5000-Comments/5300-Design",
+        "Description": ""
+    },
+    "Compliancy Review": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8400-CompliancyReviews",
+        "Description": ""
+    },
+    "Correspondence Record": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/1000-Correspondence",
+        "Description": ""
+    },
+    "DEIR (modified)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/1000-Programmes",
+        "Description": ""
+    },
+    "DEIR (original)": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/X-Client",
+        "Description": ""
+    },
+    "Design and Access Statement": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
+        "Description": ""
+    },
+    "Design Guidelines (project related)": {
+        "Category": "Undefined",
+        "Path": "0-ProjectLibrary/StandardsAndGuidance",
+        "Description": ""
+    },
+    "Design Responsibility Matrix": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Contracts",
+        "Description": ""
+    },
+    "Design Review": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8000-DesignReviews",
+        "Description": ""
+    },
+    "Drawing Register": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/2000-Transmittals",
+        "Description": ""
+    },
+    "Drawings DWG Archive/Superseded": {
+        "Category": "Drawings",
+        "Path": "BondBryan/A-Architecture/D-Drawing/Archive",
+        "Description": ""
+    },
+    "Drawings DWG Current Version": {
+        "Category": "Drawings",
+        "Path": "BondBryan/A-Architecture/D-Drawing/Shared",
+        "Description": ""
+    },
+    "Drawings DWG WIP/ToBeChecked": {
+        "Category": "Drawings",
+        "Path": "BondBryan/A-Architecture/D-Drawing/WIP",
+        "Description": ""
+    },
+    "Drawings PDF Archive/Superseded": {
+        "Category": "Drawings",
+        "Path": "BondBryan/A-Architecture/D-Drawing/Archive",
+        "Description": ""
+    },
+    "Drawings PDF Current Version": {
+        "Category": "Drawings",
+        "Path": "BondBryan/A-Architecture/D-Drawing/Shared",
+        "Description": ""
+    },
+    "Drawings PDF WIP/ToBeChecked": {
+        "Category": "Drawings",
+        "Path": "BondBryan/A-Architecture/D-Drawing/WIP",
+        "Description": ""
+    },
+    "DTM Presentation": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/6000-Presentations",
+        "Description": ""
+    },
+    "Duty of Care (draft)": {
+        "Category": "Contracts and legal",
+        "Path": "ExternalDisciplines/X-Client",
+        "Description": ""
+    },
+    "Duty of Care (signed)": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Contracts",
+        "Description": ""
+    },
+    "Elements Schedules (windows, doors,…)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/0000-ProjectSchedules/Shared",
+        "Description": ""
+    },
+    "Email saved (for record)": {
+        "Category": "Contracts and legal",
+        "Path": "BondBryan/A-Architecture/T-Textual/1000-Correspondence",
+        "Description": ""
+    },
+    "Fees approved": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Fees/Fees Approvals",
+        "Description": ""
+    },
+    "Fees calculations": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Fees/Fees Calculations 'L'",
+        "Description": ""
+    },
+    "Fees letter": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Fees/Fees Letters 'T'",
+        "Description": ""
+    },
+    "File Note": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/0000-NotesAndStatements",
+        "Description": ""
+    },
+    "Finishes schedule": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/0000-ProjectSchedules/Shared/0600-FinishesSchedules",
+        "Description": ""
+    },
+    "Fire Engineer report": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/K-FireEngineer/YYYY-MM-DD Description",
+        "Description": ""
+    },
+    "H&S Designer Competence Assessment": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM/T-Textual/5000-9999 Files",
+        "Description": ""
+    },
+    "H&S Designer Risk Assessment": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM/T-Textual/5000-9999 Files",
+        "Description": ""
+    },
+    "Heat Loss Calculation Report": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
+        "Description": ""
+    },
+    "HRB submission": {
+        "Category": "Texts and Presentations",
+        "Path": "0-ProjectMilestones/Milestone-BuildingRegulationsSubmission",
+        "Description": ""
+    },
+    "IFC Library": {
+        "Category": "BIM and Models",
+        "Path": "0-ProjectLibrary/00000 BIMLibrary/IFC-Libraries",
+        "Description": ""
+    },
+    "Images Precedent": {
+        "Category": "Images and Photo",
+        "Path": "0-ProjectLibrary/Precedents",
+        "Description": ""
+    },
+    "Incoming Documents": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "Incoming Drawings": {
+        "Category": "Drawings",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "Interior specific Documents  (appointed)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/I-InteriorDesign",
+        "Description": ""
+    },
+    "Interior specific Drawings  (appointed)": {
+        "Category": "Drawings",
+        "Path": "BondBryan/I-InteriorDesign",
+        "Description": ""
+    },
+    "Interior specific Lists  (appointed)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/I-InteriorDesign",
+        "Description": ""
+    },
+    "ITT Client Documentation": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/PreCommission/ITT-InvitationToTender/ClientDocumentation",
+        "Description": ""
+    },
+    "ITT Drawings": {
+        "Category": "Drawings",
+        "Path": "0-ProjectAdmin/PreCommission/ITT-InvitationToTender/BBAOriginals",
+        "Description": ""
+    },
+    "ITT External Originals": {
+        "Category": "Drawings",
+        "Path": "0-ProjectAdmin/PreCommission/ITT-InvitationToTender/ExternalOriginals",
+        "Description": ""
+    },
+    "ITT Feedback and results": {
+        "Category": "Texts and Presentations",
+        "Path": "0-ProjectAdmin/PreCommission/ITT-InvitationToTender/Submission",
+        "Description": ""
+    },
+    "ITT Report": {
+        "Category": "Texts and Presentations",
+        "Path": "0-ProjectAdmin/PreCommission/ITT-InvitationToTender/BBAOriginals",
+        "Description": ""
+    },
+    "ITT-Submission": {
+        "Category": "Texts and Presentations",
+        "Path": "0-ProjectAdmin/PreCommission/ITT-InvitationToTender/Submission",
+        "Description": ""
+    },
+    "JCT Contract (draft)": {
+        "Category": "Contracts and legal",
+        "Path": "ExternalDisciplines/X-Client",
+        "Description": ""
+    },
+    "JCT Contract (final)": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Contracts",
+        "Description": ""
+    },
+    "K10 Partitions": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/X-Subcontractors/Partitions",
+        "Description": ""
+    },
+    "Landscape Documents  (appointed)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/L-LandscapeArchitecture",
+        "Description": ""
+    },
+    "Landscape Drawings  (appointed)": {
+        "Category": "Drawings",
+        "Path": "BondBryan/L-LandscapeArchitecture",
+        "Description": ""
+    },
+    "Landscape Lists  (appointed)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/L-LandscapeArchitecture",
+        "Description": ""
+    },
+    "Letter of compliance": {
+        "Category": "Contracts and legal",
+        "Path": "BondBryan/A-Architecture/T-Textual/1000-Correspondence",
+        "Description": ""
+    },
+    "Lift information": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/X-Subcontractors/LiftAndEscalators",
+        "Description": ""
+    },
+    "Logos": {
+        "Category": "Images and Photo",
+        "Path": "0-ProjectLibrary/Logos",
+        "Description": ""
+    },
+    "Method Statement": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/0000-NotesAndStatements",
+        "Description": ""
+    },
+    "MIDP": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/O-InformationManager",
+        "Description": ""
+    },
+    "Milestone Records (Drawings, reports, contracts…)": {
+        "Category": "Other",
+        "Path": "0-ProjectMilestones",
+        "Description": ""
+    },
+    "Minutes (BB produced)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/3000-Minutes",
+        "Description": ""
+    },
+    "Minutes (Incoming)": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "Model Federated": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/M-Model/1000-FederatedModels",
+        "Description": ""
+    },
+    "Model IFC (BB produced)": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/M-Model/2000-IFCModels",
+        "Description": ""
+    },
+    "Model IFC (incoming)": {
+        "Category": "BIM and Models",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "Model Native (rvt/pln)": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/M-Model/4000-NativeModels",
+        "Description": ""
+    },
+    "Other calculations": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/6000-Calculations",
+        "Description": ""
+    },
+    "Other comments": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/5000-Comments/5700-OtherComments",
+        "Description": ""
+    },
+    "Other Contract documents (draft)": {
+        "Category": "Contracts and legal",
+        "Path": "ExternalDisciplines/X-Client",
+        "Description": ""
+    },
+    "Other Contract documents (final)": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Contracts",
+        "Description": ""
+    },
+    "Other Reviews": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8500-OtherReviews",
+        "Description": ""
+    },
+    "Other Schedules": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/9000-Miscellaneous",
+        "Description": ""
+    },
+    "Outsourcing Briefing": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/9000-Miscellaneous",
+        "Description": ""
+    },
+    "Outsourcing Comments": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/5000-Comments/5500-Outsourcing",
+        "Description": ""
+    },
+    "Outsourcing Tracker": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/7000-Outsourcing",
+        "Description": ""
+    },
+    "PDBR Documents (appointed)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDBR",
+        "Description": ""
+    },
+    "PDBR Documents (external)": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDBR",
+        "Description": ""
+    },
+    "PDBR Drawings (appointed)": {
+        "Category": "Drawings",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDBR",
+        "Description": ""
+    },
+    "PDBR Drawings (external)": {
+        "Category": "Drawings",
+        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDBR",
+        "Description": ""
+    },
+    "PDBR Lists (appointed)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDBR",
+        "Description": ""
+    },
+    "PDBR Lists (external)": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDBR",
+        "Description": ""
+    },
+    "PDBR Lists(appointed)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDBR",
+        "Description": ""
+    },
+    "PDCDM Documents  (appointed)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
+        "Description": ""
+    },
+    "PDCDM Documents  (external)": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
+        "Description": ""
+    },
+    "PDCDM Drawings  (appointed)": {
+        "Category": "Drawings",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
+        "Description": ""
+    },
+    "PDCDM Drawings  (external)": {
+        "Category": "Drawings",
+        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
+        "Description": ""
+    },
+    "PDCDM Drawings (external)": {
+        "Category": "Drawings",
+        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
+        "Description": ""
+    },
+    "PDCDM Lists  (appointed)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
+        "Description": ""
+    },
+    "PDCDM Lists  (external)": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
+        "Description": ""
+    },
+    "PDCDM Lists (appointed)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
+        "Description": ""
+    },
+    "PDCDM Lists (external)": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/O-PrincipalDesigner/0-PDCDM",
+        "Description": ""
+    },
+    "Photograph Existing": {
+        "Category": "Images and Photo",
+        "Path": "BondBryan/A-Architecture/I-Image/2000-ProjectPhotography",
+        "Description": ""
+    },
+    "Photograph Post Completion": {
+        "Category": "Images and Photo",
+        "Path": "BondBryan/A-Architecture/I-Image/2000-ProjectPhotography",
+        "Description": ""
+    },
+    "Pictures Site visit": {
+        "Category": "Images and Photo",
+        "Path": "BondBryan/A-Architecture/I-Image/2000-ProjectPhotography",
+        "Description": ""
+    },
+    "Planning consultation boards": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/6000-Presentations",
+        "Description": ""
+    },
+    "Planning Submission and documents": {
+        "Category": "Texts and Presentations",
+        "Path": "0-ProjectMilestones/Milestone-PlanningApplicationSubmission",
+        "Description": ""
+    },
+    "PQQ Client Documentation": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/PreCommission/PQQ-PreQualificationQuestionnaire/ClientDocumentation",
+        "Description": ""
+    },
+    "PQQ Drawings": {
+        "Category": "Drawings",
+        "Path": "0-ProjectAdmin/PreCommission/PQQ-PreQualificationQuestionnaire/BBAOriginals",
+        "Description": ""
+    },
+    "PQQ External Originals": {
+        "Category": "Drawings",
+        "Path": "0-ProjectAdmin/PreCommission/PQQ-PreQualificationQuestionnaire/ExternalOriginals",
+        "Description": ""
+    },
+    "PQQ Feedback and results": {
+        "Category": "Texts and Presentations",
+        "Path": "0-ProjectAdmin/PreCommission/PQQ-PreQualificationQuestionnaire/Submission",
+        "Description": ""
+    },
+    "PQQ-Submission": {
+        "Category": "Texts and Presentations",
+        "Path": "0-ProjectAdmin/PreCommission/PQQ-PreQualificationQuestionnaire/Submission",
+        "Description": ""
+    },
+    "Presentation Main file (Affinity)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/6000-Presentations",
+        "Description": ""
+    },
+    "Presentation Main file (InDesign)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/6000-Presentations",
+        "Description": ""
+    },
+    "Presentation Main file (PowerPoint)": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/6000-Presentations",
+        "Description": ""
+    },
+    "Product reference": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/X-Subcontractors/Relevant issuing company",
+        "Description": ""
+    },
+    "Programme (BB produced)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/1000-Programmes",
+        "Description": ""
+    },
+    "Programme (incoming)": {
+        "Category": "Schedules and Lists",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "Progress report": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
+        "Description": ""
+    },
+    "Project Directory": {
+        "Category": "Schedules and Lists",
+        "Path": "0-ProjectAdmin/ProjectDirectory",
+        "Description": ""
+    },
+    "RIBA Stage Completion": {
+        "Category": "Drawings",
+        "Path": "0-ProjectMilestones/Relevant RIBA stage",
+        "Description": ""
+    },
+    "Room Data Sheets (RDS)": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/5000-RoomDataSheets",
+        "Description": ""
+    },
+    "RVT Families": {
+        "Category": "BIM and Models",
+        "Path": "0-ProjectLibrary/00000 BIMLibrary/Families",
+        "Description": ""
+    },
+    "Sanitaryware schedule": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/0000-ProjectSchedules/Shared/0700-OtherSchedules",
+        "Description": ""
+    },
+    "Schedule of accommodation": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/0000-ProjectSchedules/Shared/0000-AreaSchedules",
+        "Description": ""
+    },
+    "Site visit report": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
+        "Description": ""
+    },
+    "Sketch ideas": {
+        "Category": "Drawings",
+        "Path": "BondBryan/A-Architecture/I-Image/4000-Sketches",
+        "Description": ""
+    },
+    "Specifications BB produced document": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/7000-Specifications",
+        "Description": ""
+    },
+    "Specifications incoming doc": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/X-Subcontractors/Relevant issuing company",
+        "Description": ""
+    },
+    "Stage Report": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
+        "Description": ""
+    },
+    "Standards and guidance (outside of contract)": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectLibrary/StandardsAndGuidance",
+        "Description": ""
+    },
+    "Strategic Brief Development": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/9000-Miscellaneous",
+        "Description": ""
+    },
+    "Strategic Headcount List": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/8000-StrategicLists",
+        "Description": ""
+    },
+    "Strategic Investment appraisals and cost": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/L-List/8000-StrategicLists",
+        "Description": ""
+    },
+    "Strategic Options Development": {
+        "Category": "Drawings",
+        "Path": "BondBryan/A-Architecture/T-Textual/9000-Miscellaneous",
+        "Description": ""
+    },
+    "Strategic Space Need analysis": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/8000-StrategicLists",
+        "Description": ""
+    },
+    "Structural engineer's Documents": {
+        "Category": "Texts and Presentations",
+        "Path": "ExternalDisciplines/S-StructuralEngineering/YYYY-MM-DD Description",
+        "Description": ""
+    },
+    "Structural engineer's Drawings": {
+        "Category": "Drawings",
+        "Path": "ExternalDisciplines/S-StructuralEngineering/YYYY-MM-DD Description",
+        "Description": ""
+    },
+    "Structural engineer's Models": {
+        "Category": "BIM and Models",
+        "Path": "ExternalDisciplines/S-StructuralEngineering/YYYY-MM-DD Description",
+        "Description": ""
+    },
+    "Subcontractor information": {
+        "Category": "Drawings",
+        "Path": "ExternalDisciplines/X-Subcontractors/Relevant issuing company",
+        "Description": ""
+    },
+    "Supporting images reports / presentation (Affinity)": {
+        "Category": "Images and Photo",
+        "Path": "BondBryan/A-Architecture/I-Image/1000-PresentationImages",
+        "Description": ""
+    },
+    "Supporting images reports / presentation (jpg/png)": {
+        "Category": "Images and Photo",
+        "Path": "BondBryan/A-Architecture/I-Image/1000-PresentationImages",
+        "Description": ""
+    },
+    "Survey Cetopo file (2D/3D)": {
+        "Category": "BIM and Models",
+        "Path": "ExternalDisciplines/Y-3DMapping",
+        "Description": ""
+    },
+    "Survey GoogleMap / orthophoto": {
+        "Category": "Images and Photo",
+        "Path": "ExternalDisciplines/Y-2DMapping",
+        "Description": ""
+    },
+    "Survey Incoming": {
+        "Category": "Other",
+        "Path": "ExternalDisciplines/Relevant issuing discipline",
+        "Description": ""
+    },
+    "Survey OS Map (2D)": {
+        "Category": "Other",
+        "Path": "ExternalDisciplines/Y-2DMapping",
+        "Description": ""
+    },
+    "Sustainability Carbon Assessments": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8200-SustainabilityReviews",
+        "Description": ""
+    },
+    "Sustainability Project Briefing Document": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/9000-Miscellaneous",
+        "Description": ""
+    },
+    "Sustainability Review": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8200-SustainabilityReviews",
+        "Description": ""
+    },
+    "Technical Review": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/8000-ProjectReviews/8100-TechnicalReviews",
+        "Description": ""
+    },
+    "Term of engagement (draft)": {
+        "Category": "Contracts and legal",
+        "Path": "ExternalDisciplines/X-Client",
+        "Description": ""
+    },
+    "Term of engagement (signed)": {
+        "Category": "Contracts and legal",
+        "Path": "0-ProjectAdmin/Contracts",
+        "Description": ""
+    },
+    "Thermal Bridging": {
+        "Category": "Texts and Presentations",
+        "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
+        "Description": ""
+    },
+    "TIDP": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/1000-Programmes",
+        "Description": ""
+    },
+    "Transmittal Sheet": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/A-Architecture/L-List/2000-Transmittals",
+        "Description": ""
+    },
+    "Twinmotion file": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/M-Model/3000-VisualisationsModels",
+        "Description": ""
+    },
+    "Video": {
+        "Category": "Other",
+        "Path": "BondBryan/A-Architecture/V-VideoAudio/2000-OtherVideo",
+        "Description": ""
+    },
+    "Visualisation files export": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/M-Model/3000-VisualisationsModels",
+        "Description": ""
+    },
+    "Visualisation files native": {
+        "Category": "BIM and Models",
+        "Path": "BondBryan/A-Architecture/M-Model/3000-VisualisationsModels",
+        "Description": ""
+    },
+    "Visualisation Output Images": {
+        "Category": "Images and Photo",
+        "Path": "BondBryan/A-Architecture/I-Image/3000-Visualisations",
+        "Description": ""
+    },
+    "Visualisations Output Video": {
+        "Category": "Other",
+        "Path": "BondBryan/A-Architecture/V-VideoAudio/1000-Visualisations",
+        "Description": ""
+    }
+}
