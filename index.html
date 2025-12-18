@@ -355,7 +355,7 @@
         <img src="BB_Logo_Full.png" alt="BB Structure logo" class="logo" id="logo-btn">
         <div class="heading">
           <p class="eyebrow">List of files</p>
-          <h1>Version 2.1b</h1>
+          <h1>Version 2.2</h1>
         </div>
       </div>
       <div class="status" id="status">Loading Files.json…</div>
@@ -581,7 +581,7 @@
       function renderItemDetail(item) {
         const folderPath = item.path || [];
         const folder = getFolderAtPath(folderPath) || state.tree;
-        const breadcrumbPath = folderPath.slice(0, Math.max(folderPath.length - 1, 0));
+        const breadcrumbPath = folderPath.slice();
         const description = descriptionForName(item.name);
         state.currentSelection = { type: 'item', name: item.name, path: item.path };
         state.selectedCategories = new Set(allCategories());
@@ -798,7 +798,7 @@
           if (!item) return;
           const folderPath = item.path || [];
           const folder = getFolderAtPath(folderPath) || state.tree;
-          const breadcrumbPath = folderPath.slice(0, Math.max(folderPath.length - 1, 0));
+          const breadcrumbPath = folderPath.slice();
           const description = descriptionForName(item.name);
           renderDetailView({
             title: item.name,
