@@ -301,7 +301,7 @@
     },
     "Elements Schedules (windows, doors,…)": {
         "Category": "Schedules and Lists",
-        "Path": "BondBryan/A-Architecture/L-List/0000-ProjectSchedules/Shared",
+        "Path": "BondBryan/A-Architecture/L-List/0000-Schedules/Shared",
         "Description": "Schedules listing building elements (e.g., windows, doors, etc.) produced by BIM software."
     },
     "Email saved (for record)": {
@@ -331,7 +331,7 @@
     },
     "Finishes schedule": {
         "Category": "Schedules and Lists",
-        "Path": "BondBryan/A-Architecture/L-List/0000-ProjectSchedules/Shared/0600-FinishesSchedules",
+        "Path": "BondBryan/A-Architecture/L-List/0000-Schedules/Shared/0600-Finishes",
         "Description": "Schedule listing all finish materials (flooring, paint, etc.) and their specifications. Internal design schedule; coordinate with room data sheets and specifications."
     },
     "Fire Engineer report": {
@@ -341,12 +341,12 @@
     },
     "H&S Designer Competence Assessment": {
         "Category": "Texts and Presentations",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM/T-Textual/5000-9999 Files",
+        "Path": "BondBryan/O-PrincipalDesigner/CDM/T-Textual/5000-9999 Files",
         "Description": "Assessment form evaluating the competence of designers from a health and safety (CDM) perspective. Complete for all design team members as per CDM requirements."
     },
     "H&S Designer Risk Assessment": {
         "Category": "Texts and Presentations",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM/T-Textual/5000-9999 Files",
+        "Path": "BondBryan/O-PrincipalDesigner/CDM/T-Textual/5000-9999 Files",
         "Description": "Risk assessment focusing on design-stage health and safety considerations (CDM regulations). Internal CDM risk assessment; update as design evolves to address and mitigate risks."
     },
     "Heat Loss Calculation Report": {
@@ -566,7 +566,7 @@
     },
     "PDBR Documents (appointed)": {
         "Category": "Texts and Presentations",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDBR",
+        "Path": "BondBryan/O-PrincipalDesigner/BR",
         "Description": "Documents related to the Principal Designer (Building Regulations) role, compiled by the appointed team. Internal building regs compliance documentation; coordinate with any external PDBR documents if applicable."
     },
     "PDBR Documents (external)": {
@@ -576,7 +576,7 @@
     },
     "PDBR Drawings (appointed)": {
         "Category": "Drawings",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDBR",
+        "Path": "BondBryan/O-PrincipalDesigner/BR",
         "Description": "Drawings focusing on building regulations compliance produced by the appointed Principal Designer. Internal compliance drawings; include these in the design set and coordinate with external PD if needed."
     },
     "PDBR Drawings (external)": {
@@ -586,7 +586,7 @@
     },
     "PDBR Lists (appointed)": {
         "Category": "Schedules and Lists",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDBR",
+        "Path": "BondBryan/O-PrincipalDesigner/BR",
         "Description": "Lists or schedules (e.g., compliance checklists) maintained by the appointed Principal Designer (Building Regulations). Internal compliance lists; keep them updated and cross-reference with external lists if provided."
     },
     "PDBR Lists (external)": {
@@ -596,7 +596,7 @@
     },
     "PDCDM Documents  (appointed)": {
         "Category": "Texts and Presentations",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
+        "Path": "BondBryan/O-PrincipalDesigner/CDM",
         "Description": "Documents related to the Principal Designer (CDM regulations) role, produced by the appointed team. Internal health & safety documentation; coordinate with external PD documents if the role is external."
     },
     "PDCDM Documents  (external)": {
@@ -606,7 +606,7 @@
     },
     "PDCDM Drawings  (appointed)": {
         "Category": "Drawings",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
+        "Path": "BondBryan/O-PrincipalDesigner/CDM",
         "Description": "Drawings related to CDM (Construction Design & Management) considerations by the appointed team. Internal safety-related drawings; coordinate with external PD if one is appointed outside."
     },
     "PDCDM Drawings  (external)": {
@@ -616,7 +616,7 @@
     },
     "PDCDM Lists  (appointed)": {
         "Category": "Schedules and Lists",
-        "Path": "BondBryan/O-PrincipalDesigner/O-PDCDM",
+        "Path": "BondBryan/O-PrincipalDesigner/CDM",
         "Description": "Lists or schedules (like risk registers) created by the appointed Principal Designer under CDM. Internal PD CDM lists; update regularly and share with the team for compliance."
     },
     "PDCDM Lists  (external)": {
@@ -726,7 +726,7 @@
     },
     "Re-use schedule of elements": {
         "Category": "Schedules and Lists",
-        "Path": "BondBryan/I-InteriorDesign/L-List/0000-ProjectSchedules/Shared/0800-ReUseSchedules",
+        "Path": "BondBryan/I-InteriorDesign/L-List/0000-Schedules/Shared/0800-ReUseSchedules",
         "Description": "Elements carefully set aside and reused in the design."
     },
     "RIBA Stage Completion": {
@@ -746,12 +746,12 @@
     },
     "Sanitaryware schedule": {
         "Category": "Schedules and Lists",
-        "Path": "BondBryan/A-Architecture/L-List/0000-ProjectSchedules/Shared/0700-OtherSchedules",
+        "Path": "BondBryan/A-Architecture/L-List/0000-Schedules/Shared/0700-OtherSchedules",
         "Description": "Schedule listing sanitary fixtures (sinks, toilets, etc.) and their specifications for the project. Internal schedule; coordinate with plumbing layouts and ensure items match the design. Bond Bryan produced document supplier information to be included in ExternalDiscipline/X-Subcontractors."
     },
     "Schedule of accommodation": {
         "Category": "Schedules and Lists",
-        "Path": "BondBryan/A-Architecture/L-List/0000-ProjectSchedules/Shared/0000-AreaSchedules",
+        "Path": "BondBryan/A-Architecture/L-List/0000-Schedules/Shared/0000-Areas",
         "Description": "Schedule of accommodation outlining all spaces/rooms and their areas against requirements."
     },
     "Site visit report": {
