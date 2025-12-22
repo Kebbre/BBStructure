@@ -354,6 +354,11 @@
         "Path": "BondBryan/A-Architecture/T-Textual/4000-Reports",
         "Description": "Report analyzing building heat loss to inform thermal performance and insulation requirements. technical report with expertise from specialist; cross-check with M&E consultant data to ensure energy efficiency targets."
     },
+    "Historic building fabric analysis (retrofit)": {
+        "Category": "Drawings",
+        "Path": "BondBryan/I-InteriorDesign/D-Drawings/Shared/1000-AnalysisDrawings",
+        "Description": "Historic analysis drawings or documents to request specific surveys in retrofit projects."
+    },
     "HRB submission": {
         "Category": "Texts and Presentations",
         "Path": "0-ProjectMilestones/Milestone-BuildingRegulationsSubmission",
@@ -718,6 +723,11 @@
         "Category": "Schedules and Lists",
         "Path": "ExternalDisciplines/X-Subcontractors/Relevant issuing company",
         "Description": "Log of RFIs raised by contractors and the corresponding clarifications provided by the design team. Helps track unresolved or pending technical clarifications."
+    },
+    "Re-use schedule of elements": {
+        "Category": "Schedules and Lists",
+        "Path": "BondBryan/I-InteriorDesign/L-List/0000-ProjectSchedules/Shared/0800-ReUseSchedules",
+        "Description": "Elements carefully set aside and reused in the design."
     },
     "RIBA Stage Completion": {
         "Category": "Drawings",
