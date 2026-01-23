@@ -6,12 +6,12 @@
     },
     "2D Textures (LowRes)": {
         "Category": "BIM and Models",
-        "Path": "0-ProjectLibrary/00000 BIMLibrary/Textures",
+        "Path": "0-ProjectAdmin/ProjectLibrary/00000 BIMLibrary/Textures",
         "Description": "Low-resolution (max 800 x 800px) 2D texture images for BIM models to avoid large library files. Stored in the project BIM library; use for quick visualisations or placeholders."
     },
     "3D Models Objects": {
         "Category": "BIM and Models",
-        "Path": "0-ProjectLibrary/00000 BIMLibrary/Objects",
+        "Path": "0-ProjectAdmin/ProjectLibrary/00000 BIMLibrary/Objects",
         "Description": "Library of 3D model object files/components for use in project BIM models. Located in the BIM library; includes standard model components for consistency."
     },
     "3D Visualisation Objects": {
@@ -56,12 +56,12 @@
     },
     "Audio Recording": {
         "Category": "Other | Undefined",
-        "Path": "BondBryan/A-Architecture/V-VideoAudio/3000-AudioFilesOnly",
+        "Path": "BondBryan/A-Architecture/V-VideoAudio/1000-AudioFilesOnly",
         "Description": "Audio file recorded for project purposes (e.g., meeting, interview, or site walkthrough). Internal audio record; transcribe or note key points for project documentation. does not replace meeting minutes."
     },
     "Backup models (rvt/pln)": {
         "Category": "BIM and Models",
-        "Path": "0-ProjectMilestones/Backup-ArchivedBIMModels",
+        "Path": "0-ProjectAdmin/ProjectMilestones/Backup-ArchivedBIMModels",
         "Description": "Backup archive of BIM model files (e.g., Revit or ArchiCAD models) saved at key milestones. Stored with project milestones; use for restoring or reviewing earlier design versions."
     },
     "Balconies information": {
@@ -71,7 +71,7 @@
     },
     "Bespoke rulesets (solibri)": {
         "Category": "BIM and Models",
-        "Path": "0-ProjectLibrary/00000 BIMLibrary/Translators",
+        "Path": "0-ProjectAdmin/ProjectLibrary/00000 BIMLibrary/Translators",
         "Description": "Custom Solibri model-checking rulesets tailored for this project."
     },
     "BIM BEP (draft BB produced)": {
@@ -131,7 +131,7 @@
     },
     "BIM Translators": {
         "Category": "BIM and Models",
-        "Path": "0-ProjectLibrary/00000 BIMLibrary/Translators",
+        "Path": "0-ProjectAdmin/ProjectLibrary/00000 BIMLibrary/Translators",
         "Description": "Configuration files or translator settings for BIM software (e.g., for IFC export/import). Stored in the project BIM library; use for consistent data exchange between software platforms."
     },
     "BREEAM / LEED submission": {
@@ -141,12 +141,12 @@
     },
     "British Standard (project related)": {
         "Category": "Undefined",
-        "Path": "0-ProjectLibrary/StandardsAndGuidance",
+        "Path": "0-ProjectAdmin/ProjectLibrary/StandardsAndGuidance",
         "Description": "British Standard publication relevant to the project (e.g., building code or guidance document). Over and above Building Regulations and Clients' issued contractual documents (ExternalDiscipline/X-Client)."
     },
     "Building Control Submission": {
         "Category": "Texts and Presentations",
-        "Path": "0-ProjectMilestones/Milestone-BuildingRegulationsSubmission",
+        "Path": "0-ProjectAdmin/ProjectMilestones/Milestone-BuildingRegulationsSubmission",
         "Description": "Documents submitted for Building Control approval, demonstrating regulatory compliance. Major milestone submission; ensure all required drawings and reports are included."
     },
     "Building Control tracker (modified)": {
@@ -211,7 +211,7 @@
     },
     "Construction Record Drawings": {
         "Category": "Drawings",
-        "Path": "0-ProjectMilestones/RIBA Stage 5-Construction",
+        "Path": "0-ProjectAdmin/ProjectMilestones/RIBA Stage 5-Construction",
         "Description": "Final set of drawings showing the project as actually constructed. Do not issue 'As-built' but 'Construction Record'."
     },
     "Correspondence Record": {
@@ -236,7 +236,7 @@
     },
     "Design Guidelines (project related)": {
         "Category": "Undefined",
-        "Path": "0-ProjectLibrary/StandardsAndGuidance",
+        "Path": "0-ProjectAdmin/ProjectLibrary/StandardsAndGuidance",
         "Description": "Project-specific design guidelines or standards document. Over and above Building Regulations and Clients' issued contractual documents (ExternalDiscipline/X-Client)."
     },
     "Design Responsibility Matrix": {
@@ -361,17 +361,17 @@
     },
     "HRB submission": {
         "Category": "Texts and Presentations",
-        "Path": "0-ProjectMilestones/Milestone-BuildingRegulationsSubmission",
+        "Path": "0-ProjectAdmin/ProjectMilestones/Milestone-BuildingRegulationsSubmission",
         "Description": "Submission documents for a Higher-Risk Building (HRB) in line with new building safety regulations. Regulatory submission; coordinate closely with the building safety regulator and include all required details."
     },
     "IFC Library": {
         "Category": "BIM and Models",
-        "Path": "0-ProjectLibrary/00000 BIMLibrary/IFC-Libraries",
+        "Path": "0-ProjectAdmin/ProjectLibrary/00000 BIMLibrary/IFC-Libraries",
         "Description": "Library of IFC (Industry Foundation Classes) files imported in BIM software. Delete old library files when not in use (only latest versions to be kept)."
     },
     "Images Precedent": {
         "Category": "Images and Photo",
-        "Path": "0-ProjectLibrary/Precedents",
+        "Path": "0-ProjectAdmin/ProjectLibrary/Precedents",
         "Description": "Collection of precedent images (reference photos or case studies) relevant to the project. Stored in the project library; use for design inspiration or to communicate ideas to the client."
     },
     "Incoming Documents": {
@@ -471,7 +471,7 @@
     },
     "Logos": {
         "Category": "Images and Photo",
-        "Path": "0-ProjectLibrary/Logos",
+        "Path": "0-ProjectAdmin/ProjectLibrary/Logos",
         "Description": "Collection of project-related logos (client, consultants, etc.) in image format. For use in  presentations and BIM model; ensure only current official logos are used."
     },
     "Method Statement": {
@@ -486,7 +486,7 @@
     },
     "Milestone Records (Drawings, reports, contracts…)": {
         "Category": "Other",
-        "Path": "0-ProjectMilestones",
+        "Path": "0-ProjectAdmin/ProjectMilestones",
         "Description": "Archive of documents (drawings, reports, contracts, etc.) compiled at each project milestone. Central milestone archive; review to track what was delivered at each stage."
     },
     "Minutes (BB produced)": {
@@ -646,7 +646,7 @@
     },
     "Planning Submission and documents": {
         "Category": "Texts and Presentations",
-        "Path": "0-ProjectMilestones/Milestone-PlanningApplicationSubmission",
+        "Path": "0-ProjectAdmin/ProjectMilestones/Milestone-PlanningApplicationSubmission",
         "Description": "Documents compiled for the planning application submission (forms, drawings, reports). Submitted information, WIP drawings/documents to be saved elsewhere."
     },
     "PQQ Client Documentation": {
@@ -731,7 +731,7 @@
     },
     "RIBA Stage Completion": {
         "Category": "Drawings",
-        "Path": "0-ProjectMilestones/Relevant RIBA stage",
+        "Path": "0-ProjectAdmin/ProjectMilestones/Relevant RIBA stage",
         "Description": "Documents marking the completion of a RIBA work stage (deliverables compiled at stage end). Milestone records for each RIBA stage; archive these for reference and auditing."
     },
     "Room Data Sheets (RDS)": {
@@ -741,7 +741,7 @@
     },
     "RVT Families": {
         "Category": "BIM and Models",
-        "Path": "0-ProjectLibrary/00000 BIMLibrary/Families",
+        "Path": "0-ProjectAdmin/ProjectLibrary/00000 BIMLibrary/Families",
         "Description": "Library of Revit family components (doors, windows, etc.) used in the project model. Stored in BIM library; ensure all team members use the approved families for consistency."
     },
     "Sanitaryware schedule": {
@@ -786,7 +786,7 @@
     },
     "Standards and guidance (outside of contract)": {
         "Category": "Contracts and legal",
-        "Path": "0-ProjectLibrary/StandardsAndGuidance",
+        "Path": "0-ProjectAdmin/ProjectLibrary/StandardsAndGuidance",
         "Description": "Standards and guidance documents relevant to the project but not part of the contract requirements."
     },
     "Strategic Brief Development": {
@@ -941,7 +941,7 @@
     },
     "Visualisations Output Video": {
         "Category": "Other",
-        "Path": "BondBryan/A-Architecture/V-VideoAudio/1000-Visualisations",
+        "Path": "BondBryan/A-Architecture/V-VideoAudio/3000-Animations",
         "Description": "Rendered video output (animated walkthroughs or fly-throughs) from the project's visualisations. Final visualisation videos; use for client presentations and ensure file sizes are manageable for sharing."
     }
 }
